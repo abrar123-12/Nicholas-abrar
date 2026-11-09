@@ -1,0 +1,1957 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Nicholas Abrar — The Striker Who Never Scores</title>
+    <meta name="description" content="The official (un)official portfolio of Nicholas Abrar: world-class confidence, zero finishing. Every shot goes outside." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --claret: #670e36;
+        --claret-deep: #450a25;
+        --sky: #95bfe5;
+        --sky-strong: #3f83c4;
+        --gold: #ffc72c;
+        --bg: #eef4fa;
+        --surface: #ffffff;
+        --surface-2: #e2edf7;
+        --ink: #22101b;
+        --ink-soft: #5c4a55;
+        --line: #c9d9e8;
+        --pitch: #2e9e4f;
+        --pitch-dark: #227a3c;
+        color-scheme: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #150710;
+          --surface: #26101d;
+          --surface-2: #331627;
+          --ink: #f9ecf3;
+          --ink-soft: #d3b3c4;
+          --line: #4c2438;
+          --sky-strong: #8fc3ee;
+        }
+      }
+      html { box-sizing: border-box; scroll-behavior: smooth; }
+      *, *::before, *::after { box-sizing: inherit; }
+      body {
+        margin: 0;
+        font-family: "Archivo", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.55;
+      }
+      img, video { max-width: 100%; }
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+      .display { font-family: "Anton", "Archivo", sans-serif; font-weight: 400; letter-spacing: .01em; text-transform: uppercase; line-height: 1.02; }
+
+      /* ---------- HERO ---------- */
+      .hero {
+        background: linear-gradient(160deg, var(--claret) 55%, var(--claret-deep));
+        color: #fdf3f8;
+        overflow: hidden;
+      }
+      .hero-inner {
+        display: grid; grid-template-columns: 1.05fr .95fr; gap: 36px;
+        align-items: center; padding: 52px 0 60px;
+      }
+      .hero-badge {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: var(--gold); color: #22101b; font-weight: 800; font-size: .8rem;
+        padding: 6px 14px; border-radius: 999px; letter-spacing: .06em; text-transform: uppercase;
+      }
+      .hero h1 { font-size: clamp(3rem, 9vw, 6.2rem); margin: 18px 0 6px; }
+      .hero h1 .sky { color: var(--sky); }
+      .hero-role { font-size: clamp(1.05rem, 2.6vw, 1.35rem); font-weight: 700; color: var(--sky); margin: 0 0 14px; }
+      .hero-tag { font-size: 1.08rem; max-width: 34ch; margin: 0 0 26px; color: #f6dce9; }
+      .hero-tag strong { color: #fff; }
+      .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+      .btn {
+        display: inline-block; text-decoration: none; font-weight: 800; font-size: .98rem;
+        padding: 13px 22px; border-radius: 10px; border: 2px solid transparent; cursor: pointer;
+      }
+      .btn-gold { background: var(--gold); color: #22101b; }
+      .btn-ghost { border-color: var(--sky); color: #fff; background: transparent; }
+      .hero-photo { position: relative; }
+      .hero-photo img {
+        display: block; width: 100%; border-radius: 14px;
+        border: 5px solid var(--sky); box-shadow: 14px 14px 0 rgba(0,0,0,.28);
+        transform: rotate(1.6deg);
+      }
+      .rating-chip {
+        position: absolute; left: -14px; bottom: 26px; transform: rotate(-3deg);
+        background: var(--surface); color: var(--ink); border-radius: 12px;
+        padding: 12px 16px; box-shadow: 0 10px 28px rgba(0,0,0,.35); max-width: 240px;
+      }
+      .rating-chip .rc-row { display: flex; justify-content: space-between; gap: 18px; font-weight: 800; font-size: .9rem; }
+      .rating-chip .rc-row span:last-child { color: var(--claret); }
+      @media (prefers-color-scheme: dark) { .rating-chip .rc-row span:last-child { color: #ff8fb8; } }
+      .rating-chip .rc-title { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); font-weight: 800; margin-bottom: 6px; }
+
+      /* ---------- TICKER ---------- */
+      .ticker { background: var(--gold); color: #22101b; overflow: hidden; border-block: 3px solid #22101b; }
+      .ticker-track { display: flex; gap: 0; white-space: nowrap; width: max-content; animation: tick 30s linear infinite; }
+      .ticker-track span { font-weight: 800; font-size: .92rem; padding: 9px 0; }
+      .ticker-track b { margin: 0 14px; }
+      @keyframes tick { to { transform: translateX(-50%); } }
+      @media (prefers-reduced-motion: reduce) {
+        .ticker-track { animation: none; }
+        html { scroll-behavior: auto; }
+      }
+
+      /* ---------- SECTIONS ---------- */
+      section { padding: 64px 0 8px; }
+      .sec-head { max-width: 640px; margin-bottom: 30px; }
+      .sec-head h2 { font-size: clamp(1.9rem, 5vw, 2.9rem); margin: 0 0 10px; }
+      .sec-head h2 em { font-style: normal; color: var(--claret); }
+      @media (prefers-color-scheme: dark) { .sec-head h2 em { color: #ff8fb8; } }
+      .sec-head p { margin: 0; color: var(--ink-soft); font-size: 1.05rem; }
+
+      /* ---------- STATS ---------- */
+      .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+      .stat {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+        padding: 22px 18px 16px;
+      }
+      .stat .num { font-family: "Anton", sans-serif; font-size: 2.6rem; line-height: 1; color: var(--claret); }
+      @media (prefers-color-scheme: dark) { .stat .num { color: #ff8fb8; } }
+      .stat .lbl { font-weight: 800; margin-top: 8px; }
+      .stat .sub { color: var(--ink-soft); font-size: .88rem; margin-top: 2px; }
+      .stat.hero-stat { background: var(--claret); border-color: var(--claret); color: #fdf3f8; }
+      .stat.hero-stat .num { color: var(--gold); font-size: 3.6rem; }
+      .stat.hero-stat .sub { color: #f0c9da; }
+
+      /* ---------- SHOT GAME ---------- */
+      .game-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: 0 18px 44px rgba(20, 10, 30, .14); }
+      .game-stage { display: block; width: 100%; height: auto; background: #16294d; }
+      .game-bar {
+        display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px;
+        padding: 18px 20px; border-top: 1px solid var(--line);
+      }
+      .btn-shoot { background: var(--claret); color: #fff; border: none; font-size: 1.02rem; }
+      .btn-shoot:active { transform: scale(.97); }
+      .game-score { font-weight: 800; }
+      .game-score span { color: var(--claret); }
+      @media (prefers-color-scheme: dark) { .game-score span { color: #ff8fb8; } }
+      .commentary { flex: 1 1 260px; margin: 0; font-style: italic; color: var(--ink-soft); min-height: 1.5em; }
+      .btn-chant { background: var(--surface-2); color: var(--ink); border-color: var(--line); font-size: .9rem; padding: 10px 16px; }
+      .dot { fill: #d21f4b; stroke: #fff; stroke-width: 1.4; }
+      .ball-fly { fill: #fff; stroke: #22101b; stroke-width: 2; }
+      .stage-wrap { position: relative; cursor: pointer; }
+      .keeper-bubble {
+        position: absolute; top: 10px; left: 50%; transform: translateX(-50%) scale(.9);
+        background: #fff; color: #22101b; font-weight: 800; font-size: .92rem;
+        padding: 9px 16px; border-radius: 14px; border: 2px solid #22101b;
+        box-shadow: 0 8px 20px rgba(10,20,40,.25); opacity: 0; pointer-events: none;
+        transition: opacity .18s ease, transform .18s ease; max-width: 86%; text-align: center;
+      }
+      .keeper-bubble::after {
+        content: ""; position: absolute; left: 50%; bottom: -9px; transform: translateX(-50%);
+        border: 9px solid transparent; border-top-color: #22101b; border-bottom: 0;
+      }
+      .keeper-bubble.show { opacity: 1; transform: translateX(-50%) scale(1); }
+      .tap-hint { position: absolute; right: 12px; bottom: 10px; background: rgba(16,24,40,.72); color: #fff; font-size: .78rem; font-weight: 700; padding: 5px 11px; border-radius: 999px; pointer-events: none; }
+      .dot.goal-dot { fill: var(--gold); stroke: #22101b; stroke-width: 1.6; }
+      #keeper { transform-box: fill-box; transform-origin: 50% 100%; }
+      #keeper.diving { animation: keeperDive .65s ease; }
+      @keyframes keeperDive {
+        25% { transform: rotate(-17deg) translateX(-16px); }
+        55% { transform: rotate(-13deg) translateX(-13px); }
+        80% { transform: rotate(4deg); }
+      }
+      .goal-flash {
+        position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+        pointer-events: none; opacity: 0;
+      }
+      .goal-flash span {
+        font-family: "Anton", sans-serif; font-size: clamp(3.4rem, 13vw, 7.5rem); letter-spacing: .04em;
+        color: var(--gold); -webkit-text-stroke: 3px #22101b; text-shadow: 0 10px 0 rgba(34,16,27,.85), 0 22px 44px rgba(0,0,0,.5);
+        transform: rotate(-4deg) scale(.6);
+      }
+      .goal-flash.show { opacity: 1; transition: opacity .12s ease; }
+      .goal-flash.show span { animation: goalPop 1.5s ease forwards; }
+      @keyframes goalPop {
+        0% { transform: rotate(-4deg) scale(.5); }
+        18% { transform: rotate(-4deg) scale(1.12); }
+        30% { transform: rotate(-4deg) scale(1); }
+        82% { transform: rotate(-4deg) scale(1); opacity: 1; }
+        100% { transform: rotate(-4deg) scale(1.04); opacity: 0; }
+      }
+      .crowd-react {
+        position: absolute; left: 12px; bottom: 10px; max-width: 78%;
+        background: #22101b; color: #fff; font-weight: 800; font-size: .86rem; letter-spacing: .03em;
+        padding: 7px 14px; border-radius: 999px; border: 2px solid var(--gold);
+        opacity: 0; transform: translateY(8px); transition: opacity .18s ease, transform .18s ease; pointer-events: none;
+      }
+      .crowd-react.show { opacity: 1; transform: translateY(0); }
+      .crowd-react.goal { background: var(--claret); }
+      @media (prefers-reduced-motion: reduce) {
+        #keeper.diving { animation: none; }
+        .goal-flash.show span { animation: none; }
+      }
+
+      /* ---------- FUNNY STATS + EXCUSES + RUMORS + HIRE ---------- */
+      .stats-grid.three { grid-template-columns: repeat(3, 1fr); margin-top: 18px; }
+      .excuse-box {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+        padding: 26px; text-align: center;
+      }
+      .excuse-text { font-family: "Anton", sans-serif; font-size: clamp(1.5rem, 4.6vw, 2.3rem); line-height: 1.15; margin: 0 0 6px; text-transform: uppercase; }
+      .excuse-sub { color: var(--ink-soft); font-style: italic; margin: 0 0 20px; min-height: 1.4em; }
+      .excuse-count { color: var(--ink-soft); font-size: .88rem; font-weight: 700; margin-left: 12px; }
+      .rumors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .rumor { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+      .rumor .tag {
+        display: inline-block; background: #d21f4b; color: #fff; font-size: .7rem; font-weight: 800;
+        letter-spacing: .09em; padding: 4px 10px; border-radius: 999px; margin-bottom: 12px;
+      }
+      .rumor h3 { margin: 0 0 7px; font-size: 1.12rem; line-height: 1.3; }
+      .rumor p { margin: 0 0 12px; color: var(--ink-soft); font-size: .95rem; }
+      .rumor .src { font-size: .8rem; font-weight: 800; color: var(--ink-soft); border-top: 1px dashed var(--line); padding-top: 10px; }
+      .hire-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: start; }
+      .apply-card { background: var(--surface); border: 1px dashed var(--sky-strong); border-radius: 12px; padding: 24px; }
+      .apply-card h3 { margin: 0 0 6px; font-family: "Anton", sans-serif; font-size: 1.3rem; text-transform: uppercase; letter-spacing: .02em; }
+      .apply-row { display: flex; justify-content: space-between; gap: 18px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: .97rem; }
+      .apply-row span:first-child { font-weight: 800; }
+      .apply-row span:last-child { text-align: right; color: var(--ink-soft); }
+      .apply-card .btn { margin-top: 18px; }
+      .apply-note { color: var(--ink-soft); font-size: .9rem; font-style: italic; margin: 14px 0 0; }
+
+      /* ---------- MORE FUN: VAR, LIVE, DIARY, JOURNEY, MEMES, QUIZ, ASK, VS, CABINET ---------- */
+      .var-box {
+        position: absolute; top: 12px; right: 12px; z-index: 5;
+        background: #101828; color: #7df0a0; font-weight: 800; font-size: .85rem; letter-spacing: .06em;
+        padding: 9px 15px; border-radius: 8px; border: 2px solid #7df0a0;
+        opacity: 0; transform: translateY(-6px); transition: opacity .18s ease, transform .18s ease; pointer-events: none;
+      }
+      .var-box.show { opacity: 1; transform: translateY(0); }
+      .var-box.decision { background: #d21f4b; border-color: #fff; color: #fff; }
+      .live-strip {
+        display: flex; align-items: center; gap: 14px; margin-top: 16px;
+        background: #22101b; color: #fdf3f8; border-radius: 12px; padding: 13px 18px;
+      }
+      .live-badge { background: #d21f4b; color: #fff; font-weight: 800; font-size: .75rem; letter-spacing: .12em; padding: 5px 11px; border-radius: 6px; flex: none; animation: livePulse 1.6s ease infinite; }
+      @keyframes livePulse { 50% { opacity: .55; } }
+      @media (prefers-reduced-motion: reduce) { .live-badge { animation: none; } }
+      .live-strip p { margin: 0; font-weight: 600; font-size: .98rem; }
+      .diary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .diary {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px;
+        background-image: repeating-linear-gradient(transparent, transparent 30px, var(--surface-2) 31px);
+      }
+      .diary .day { font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--claret); margin-bottom: 8px; }
+      @media (prefers-color-scheme: dark) { .diary .day { color: var(--gold); } }
+      .diary p { margin: 0; font-style: italic; }
+      .journey-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 22px; }
+      .journey-step { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; position: relative; }
+      .journey-step .n { font-family: "Anton", sans-serif; font-size: 1.5rem; color: var(--claret); }
+      @media (prefers-color-scheme: dark) { .journey-step .n { color: var(--gold); } }
+      .journey-step h3 { margin: 4px 0 3px; font-size: 1rem; }
+      .journey-step p { margin: 0; color: var(--ink-soft); font-size: .9rem; }
+      .routine-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+      .routine-step { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+      .routine-step .time { display: inline-block; background: var(--claret); color: #fff; font-weight: 800; font-size: .78rem; letter-spacing: .06em; padding: 4px 10px; border-radius: 999px; margin-bottom: 10px; }
+      .routine-step h3 { margin: 0 0 4px; font-size: 1.08rem; }
+      .routine-step p { margin: 0; color: var(--ink-soft); font-size: .93rem; }
+      .routine-note { margin-top: 16px; background: var(--surface-2); border-radius: 12px; padding: 16px 20px; text-align: center; font-weight: 700; }
+      .routine-note span { color: var(--ink-soft); font-weight: 600; }
+      .missmap { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); }
+      .announce {
+        background: var(--gold); color: #22101b; border: 3px solid #22101b; border-radius: 12px;
+        padding: 18px 22px; font-weight: 700; font-size: 1.05rem; margin-bottom: 14px; text-align: center;
+      }
+      .announce b { text-transform: uppercase; letter-spacing: .05em; }
+      .memes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .meme { margin: 0; background: #101014; border-radius: 12px; overflow: hidden; }
+      .meme img { display: block; width: 100%; height: 230px; object-fit: cover; object-position: top; }
+      .meme figcaption {
+        color: #fff; font-family: "Anton", sans-serif; text-transform: uppercase; letter-spacing: .03em;
+        font-size: 1.05rem; text-align: center; padding: 13px 12px; line-height: 1.25;
+      }
+      .quiz-box { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 26px; text-align: center; }
+      .quiz-q { font-family: "Anton", sans-serif; font-size: clamp(1.4rem, 4.4vw, 2.1rem); text-transform: uppercase; margin: 0 0 6px; line-height: 1.15; }
+      .quiz-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 16px; }
+      .quiz-result { font-weight: 700; font-size: 1.05rem; margin: 18px auto 0; max-width: 52ch; min-height: 1.5em; }
+      .interview { display: grid; gap: 12px; }
+      .iv-row { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+      .iv-row .q { font-weight: 800; margin: 0 0 4px; }
+      .iv-row .q span { color: #d21f4b; }
+      .iv-row .a { margin: 0; color: var(--ink-soft); }
+      .iv-row .a b { color: var(--ink); }
+      .ask-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+      .chip {
+        font: inherit; font-weight: 700; font-size: .92rem; cursor: pointer;
+        background: var(--surface); color: var(--ink); border: 2px solid var(--line);
+        padding: 9px 16px; border-radius: 999px;
+      }
+      .chip:active { transform: scale(.97); }
+      .chip.active { border-color: var(--claret); background: var(--claret); color: #fff; }
+      .ask-answer {
+        background: var(--surface-2); border-radius: 12px; padding: 20px 22px;
+        font-size: 1.08rem; font-weight: 600; min-height: 3.2em;
+      }
+      .ask-answer small { display: block; margin-top: 6px; color: var(--ink-soft); font-weight: 700; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
+      .vs-head { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: stretch; margin-bottom: 20px; }
+      .vs-player { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; text-align: center; }
+      .vs-player img { display: block; width: 100%; height: 250px; object-fit: cover; object-position: top; }
+      .vs-player .nm { font-family: "Anton", sans-serif; font-size: 1.25rem; text-transform: uppercase; padding: 12px 10px 2px; }
+      .vs-player .team { color: var(--ink-soft); font-weight: 700; font-size: .88rem; padding-bottom: 14px; }
+      .vs-badge {
+        align-self: center; font-family: "Anton", sans-serif; font-size: 1.6rem;
+        background: #d21f4b; color: #fff; border-radius: 50%; width: 64px; height: 64px;
+        display: flex; align-items: center; justify-content: center; border: 3px solid #22101b;
+      }
+      .vs-table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+      .vs-table td { padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 1rem; }
+      .vs-table tr:last-child td { border-bottom: none; }
+      .vs-table .fv { text-align: right; font-weight: 700; color: var(--ink-soft); width: 18%; }
+      .vs-table .mid { text-align: center; font-weight: 800; }
+      .vs-table .av { font-weight: 800; color: var(--claret); width: 18%; }
+      @media (prefers-color-scheme: dark) { .vs-table .av { color: var(--gold); } }
+      .vs-verdict { margin-top: 16px; background: var(--claret); color: #fdf3f8; border-radius: 12px; padding: 18px 22px; font-weight: 700; text-align: center; }
+      .cabinet {
+        background: linear-gradient(160deg, #6b4423, #4a2c14); border: 6px solid #2e1a0a; border-radius: 10px;
+        padding: 22px 22px 8px; max-width: 640px; margin: 0 auto;
+        box-shadow: inset 0 0 60px rgba(0,0,0,.45), 0 18px 40px rgba(20,10,0,.3);
+      }
+      .shelf { border-bottom: 8px solid #2e1a0a; min-height: 74px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; margin-bottom: 14px; }
+      .shelf .dust { color: rgba(255,240,210,.75); font-style: italic; font-size: .92rem; text-align: center; }
+      .cabinet-label {
+        background: #ffc72c; color: #22101b; font-family: "Anton", sans-serif; text-align: center;
+        font-size: clamp(1.1rem, 3.6vw, 1.5rem); letter-spacing: .04em; border-radius: 6px; padding: 10px; margin-bottom: 14px; text-transform: uppercase;
+      }
+      .bgm-toggle {
+        position: fixed; right: 14px; bottom: 14px; z-index: 60;
+        font: inherit; font-weight: 800; font-size: .9rem; cursor: pointer;
+        background: var(--claret); color: #fff; border: 2px solid #22101b; border-radius: 999px;
+        padding: 11px 18px; box-shadow: 0 10px 24px rgba(0,0,0,.32);
+      }
+      .bgm-toggle:active { transform: scale(.96); }
+
+      /* ---------- FUNNY SECTION: MATCH REPORT ---------- */
+      .funny-band { background: var(--surface-2); margin-top: 64px; padding: 56px 0 64px; border-block: 1px solid var(--line); }
+      .match-meta { display: flex; flex-wrap: wrap; gap: 10px 22px; font-weight: 800; margin-bottom: 24px; }
+      .match-meta .score { background: var(--claret); color: #fff; border-radius: 8px; padding: 4px 14px; }
+      .timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+      .timeline li {
+        display: grid; grid-template-columns: 74px 1fr; gap: 16px; align-items: start;
+        background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px;
+      }
+      .timeline .min {
+        font-family: "Anton", sans-serif; font-size: 1.35rem; color: var(--claret);
+        background: var(--surface-2); border-radius: 8px; text-align: center; padding: 7px 0 5px;
+      }
+      @media (prefers-color-scheme: dark) { .timeline .min { color: var(--gold); } }
+      .timeline h3 { margin: 0 0 3px; font-size: 1.05rem; }
+      .timeline p { margin: 0; color: var(--ink-soft); }
+      .keeper-card {
+        margin-top: 22px; background: var(--claret); color: #fdf3f8; border-radius: 14px;
+        padding: 24px; display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center;
+      }
+      .keeper-card .gloves { font-family: "Anton", sans-serif; font-size: 2rem; background: var(--gold); color: #22101b; border-radius: 12px; padding: 12px 16px; text-align: center; line-height: 1.05; }
+      .keeper-card h3 { margin: 0 0 5px; font-size: 1.2rem; }
+      .keeper-card p { margin: 0; color: #f6dce9; }
+      .keeper-card p b { color: #fff; }
+      @media (max-width: 560px) {
+        .timeline li { grid-template-columns: 60px 1fr; gap: 12px; }
+        .keeper-card { grid-template-columns: 1fr; }
+        .stats-grid.three { grid-template-columns: 1fr; }
+        .routine-grid { grid-template-columns: 1fr; }
+      }
+
+      /* ---------- VIDEO ---------- */
+      .video-layout { display: grid; grid-template-columns: 340px 1fr; gap: 34px; align-items: center; }
+      .phone {
+        background: #101014; border-radius: 34px; padding: 12px;
+        box-shadow: 0 24px 48px rgba(20,4,14,.35); max-width: 340px; margin: 0 auto; width: 100%;
+      }
+      .phone video { display: block; width: 100%; border-radius: 24px; aspect-ratio: 368 / 652; object-fit: cover; background: #000; }
+      .video-points { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 14px; }
+      .video-points li { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; }
+      .video-points b { display: block; }
+      .video-points span { color: var(--ink-soft); font-size: .94rem; }
+
+      /* ---------- IDOL ---------- */
+      .idol-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
+      .idol-photo { position: relative; }
+      .idol-photo img {
+        display: block; width: 100%; border-radius: 14px;
+        border: 5px solid var(--sky); box-shadow: -12px 12px 0 rgba(0,0,0,.18);
+        transform: rotate(-1.4deg);
+      }
+      .idol-photo figcaption { color: var(--ink-soft); font-size: .9rem; margin-top: 16px; font-style: italic; }
+      figure.idol-photo { margin: 0; }
+
+      /* ---------- MOVES + CARTOON ---------- */
+      .moves-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: start; }
+      .move { border-top: 2px solid var(--line); padding: 16px 2px 14px; }
+      .move:first-child { border-top: none; padding-top: 0; }
+      .move h3 { margin: 0 0 4px; font-size: 1.15rem; }
+      .move h3 .tag { font-size: .72rem; background: var(--claret); color: #fff; border-radius: 999px; padding: 3px 10px; vertical-align: 3px; margin-left: 8px; letter-spacing: .05em; }
+      .move p { margin: 0; color: var(--ink-soft); }
+      figure.evidence { margin: 0; }
+      figure.evidence img { display: block; width: 100%; border-radius: 14px; border: 1px solid var(--line); }
+      figure.evidence figcaption { color: var(--ink-soft); font-size: .9rem; margin-top: 10px; font-style: italic; }
+
+      /* ---------- QUOTES ---------- */
+      .quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      blockquote {
+        margin: 0; background: var(--surface-2); border-radius: 12px; padding: 22px;
+      }
+      blockquote p { margin: 0 0 10px; font-size: 1.08rem; font-weight: 600; }
+      blockquote footer { color: var(--ink-soft); font-size: .9rem; font-weight: 700; }
+      .stars { color: #e8a400; letter-spacing: 2px; font-size: .95rem; }
+
+      /* ---------- RATE + COMMENTS ---------- */
+      .rate-box { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 26px; text-align: center; }
+      .rate-stars { display: flex; justify-content: center; gap: 6px; margin: 4px 0 2px; }
+      .rate-star {
+        font: inherit; background: none; border: none; cursor: pointer; padding: 4px 2px;
+        font-size: 2.6rem; line-height: 1; color: var(--line);
+        transition: transform .08s ease, color .08s ease;
+      }
+      .rate-star.filled { color: #e8a400; }
+      .rate-star:active { transform: scale(.9); }
+      .rate-msg { font-weight: 700; font-size: 1.05rem; margin: 12px auto 0; max-width: 52ch; min-height: 1.5em; }
+      .rate-avg { color: var(--ink-soft); font-weight: 700; margin: 8px 0 0; }
+      .rate-star:disabled { cursor: wait; opacity: .55; }
+      .db-hint { color: #b3541e; font-weight: 700; font-size: .88rem; margin: 10px 0 0; }
+      @media (prefers-color-scheme: dark) { .db-hint { color: #ffb37a; } }
+      .db-hint[hidden] { display: none; }
+      .comments-sync { color: var(--ink-soft); font-weight: 700; font-size: .9rem; margin: 0 0 12px; min-height: 1.4em; }
+      .comment-form { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; margin-bottom: 16px; }
+      .comment-form label { display: block; font-weight: 800; font-size: .9rem; margin: 0 0 6px; }
+      .field {
+        width: 100%; font: inherit; color: var(--ink); background: var(--bg);
+        border: 2px solid var(--line); border-radius: 10px; padding: 11px 14px; margin-bottom: 16px;
+      }
+      .field:focus { outline: none; border-color: var(--sky-strong); }
+      textarea.field { resize: vertical; min-height: 84px; }
+      .form-hint { color: #d21f4b; font-weight: 700; margin: 12px 0 0; min-height: 1.4em; }
+      .comment-list { display: grid; gap: 12px; }
+      .comment-item { background: var(--surface-2); border-radius: 12px; padding: 18px 20px; }
+      .comment-item .c-head { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; margin-bottom: 4px; }
+      .comment-item .c-name { font-weight: 800; }
+      .comment-item .c-when { color: var(--ink-soft); font-size: .82rem; font-weight: 700; }
+      .comment-item p { margin: 0; }
+      .comments-empty { color: var(--ink-soft); font-style: italic; margin: 0; }
+
+      /* ---------- HONOURS ---------- */
+      .honours { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .honour { background: var(--surface); border: 1px dashed var(--sky-strong); border-radius: 12px; padding: 20px; }
+      .honour .trophy { font-family: "Anton", sans-serif; font-size: 1.5rem; color: var(--claret); }
+      @media (prefers-color-scheme: dark) { .honour .trophy { color: var(--gold); } }
+      .honour h3 { margin: 6px 0 4px; font-size: 1.05rem; }
+      .honour p { margin: 0; color: var(--ink-soft); font-size: .93rem; }
+
+      /* ---------- CTA / FOOTER ---------- */
+      .cta {
+        margin: 70px 0 0; background: var(--claret); color: #fdf3f8;
+        border-radius: 18px; padding: 40px 32px; text-align: center;
+      }
+      .cta h2 { font-size: clamp(1.8rem, 5vw, 2.7rem); margin: 0 0 10px; }
+      .cta p { margin: 0 auto 24px; max-width: 52ch; color: #f6dce9; }
+      footer.page { padding: 30px 0 44px; text-align: center; color: var(--ink-soft); font-size: .9rem; }
+
+      @media (max-width: 860px) {
+        .hero-inner { grid-template-columns: 1fr; padding-top: 38px; }
+        .hero-photo { max-width: 420px; }
+        .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        .video-layout, .moves-layout, .idol-layout, .hire-grid { grid-template-columns: 1fr; }
+        .quotes, .honours, .rumors, .diary-grid, .memes { grid-template-columns: 1fr; }
+        .journey-grid { grid-template-columns: repeat(2, 1fr); }
+        .routine-grid { grid-template-columns: repeat(2, 1fr); }
+        .vs-head { grid-template-columns: 1fr; justify-items: center; }
+        .vs-player { width: 100%; max-width: 340px; }
+        .rating-chip { left: 8px; }
+      }
+      @media (max-width: 560px) {
+        .routine-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <span class="hero-badge">★ Official Portfolio — 0 Goals Edition</span>
+          <h1 class="display">Nicholas<br /><span class="sky">Abrar</span></h1>
+          <p class="hero-role">Striker · No. 9 · Row Z Specialist</p>
+          <p class="hero-tag">The goal is 7.32 metres wide and 2.44 metres tall. Nicholas has studied it for years — and decided to aim <strong>everywhere else</strong>. Every shot goes outside. Every. Single. One.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-gold" href="#reel">Watch the disaster</a>
+            <a class="btn btn-ghost" href="#shoot">Take shot with Abrar</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/asset-00-bebb9014f4.jpg" alt="Nicholas Abrar in an Aston Villa jersey, fist raised, on his official poster" />
+          <div class="rating-chip" aria-label="Player ratings">
+            <div class="rc-title">Player Card — Honest Edition</div>
+            <div class="rc-row"><span>CONFIDENCE</span><span>99</span></div>
+            <div class="rc-row"><span>POWER</span><span>97</span></div>
+            <div class="rc-row"><span>AIM</span><span>02</span></div>
+            <div class="rc-row"><span>FINISHING</span><span>00</span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="tickerTrack">
+        <span>BREAKING: Nicholas's last shot has just landed in the next neighbourhood <b>•</b> NASA confirms ball #14 has left the atmosphere <b>•</b> Goalkeeper files complaint: "I have nothing to do" <b>•</b> Local window shop names Nicholas "Customer of the Year" <b>•</b> Scouts baffled, entertained, slightly scared <b>•</b> 89' — Abrar shoot, ball ekhon Chand-e <b>•</b> Barcelona bench-warming rumor refuses to die <b>•</b> VAR check complete: Still Miss <b>•</b></span>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <section class="wrap" id="stats">
+      <div class="sec-head">
+        <h2 class="display">Career in <em>numbers</em></h2>
+        <p>Stats don't lie. Unfortunately for Nicholas, they also don't stay quiet.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat hero-stat">
+          <div class="num">0</div>
+          <div class="lbl">Career Goals</div>
+          <div class="sub">Not a typo. Zero. The net remains untouched, like new.</div>
+        </div>
+        <div class="stat">
+          <div class="num">312</div>
+          <div class="lbl">Shots Taken</div>
+          <div class="sub">Each one launched with full belief and zero direction.</div>
+        </div>
+        <div class="stat">
+          <div class="num">1</div>
+          <div class="lbl">Shot On Target</div>
+          <div class="sub">Later reclassified by officials as a pass.</div>
+        </div>
+        <div class="stat">
+          <div class="num">27</div>
+          <div class="lbl">Balls Lost</div>
+          <div class="sub">If found, please return. Two are still in orbit.</div>
+        </div>
+        <div class="stat">
+          <div class="num">3</div>
+          <div class="lbl">Windows Broken</div>
+          <div class="sub">The neighbours now watch matches wearing helmets.</div>
+        </div>
+        <div class="stat">
+          <div class="num">89%</div>
+          <div class="lbl">Shots Into Row Z</div>
+          <div class="sub">Fans in the back row get more touches than the keeper.</div>
+        </div>
+        <div class="stat">
+          <div class="num">47</div>
+          <div class="lbl">Matches Played</div>
+          <div class="sub">Started every one. Finished most of them standing up.</div>
+        </div>
+        <div class="stat">
+          <div class="num">100%</div>
+          <div class="lbl">Confidence</div>
+          <div class="sub">Undefeated. Ask him — he'll tell you the goals are coming.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOT MAP GAME -->
+    <section class="wrap" id="shoot">
+      <div class="sec-head">
+        <h2 class="display">Shot With <em>Nicholas Abrar</em></h2>
+        <p>Under the floodlights, on a real penalty spot — and yes, that is really him down there: his actual photo, mid-kick, No. 11 on his back, taking the shots himself. The rules of Nicholas physics: <strong>shots 1, 2 and 3 fly outside</strong> — into Row Z, the car park, low orbit — while the crowd groans <strong>"Ooooh!"</strong> and chants his name. But the <strong>4th shot? GOAL.</strong> The net bulges, the keeper finally has to move, and the stadium DJ drops the Visca Barça anthem. Tap the pitch (or the button) and take your shot.</p>
+      </div>
+      <div class="game-card">
+        <div class="stage-wrap" id="stageWrap" title="Tap to shoot">
+        <svg class="game-stage" id="stage" viewBox="0 0 900 560" role="img" aria-label="Shot With Nicholas Abrar: a floodlit penalty scene at night. Nicholas Abrar's real photo — mid-kick, number 11 on his back — takes a penalty at a bored goalkeeper in a real goal with a net, penalty box lines and a striped pitch. Three shots fly outside; every fourth shot goes in.">
+          <defs>
+            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0e1e3a"></stop>
+              <stop offset=".55" stop-color="#2c4a77"></stop>
+              <stop offset="1" stop-color="#7d9fc4"></stop>
+            </linearGradient>
+            <linearGradient id="pitchGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#49b464"></stop>
+              <stop offset="1" stop-color="#1e7034"></stop>
+            </linearGradient>
+            <radialGradient id="floodGlow">
+              <stop offset="0" stop-color="#fffbe8" stop-opacity=".95"></stop>
+              <stop offset="1" stop-color="#fffbe8" stop-opacity="0"></stop>
+            </radialGradient>
+            <pattern id="crowdPat" width="26" height="18" patternUnits="userSpaceOnUse">
+              <circle cx="4" cy="5" r="2.3" fill="#d9d2c4"></circle>
+              <circle cx="13" cy="12" r="2.3" fill="#b8452f"></circle>
+              <circle cx="21" cy="4" r="2.1" fill="#e5b83b"></circle>
+              <circle cx="8" cy="14" r="1.9" fill="#7fa8d9"></circle>
+              <circle cx="18" cy="15" r="1.8" fill="#e8e3d8"></circle>
+            </pattern>
+            <pattern id="netPat" width="13" height="13" patternUnits="userSpaceOnUse">
+              <path d="M0 0H13 M0 0V13" stroke="#ffffff" stroke-width=".9" fill="none"></path>
+            </pattern>
+            <linearGradient id="keeperKit" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffb03a"></stop>
+              <stop offset="1" stop-color="#ef6200"></stop>
+            </linearGradient>
+            <radialGradient id="faceGrad" cx=".5" cy=".38" r=".78">
+              <stop offset="0" stop-color="#f8d2a2"></stop>
+              <stop offset="1" stop-color="#eda96e"></stop>
+            </radialGradient>
+            <linearGradient id="postGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffffff"></stop>
+              <stop offset="1" stop-color="#d7e0ea"></stop>
+            </linearGradient>
+          </defs>
+          <!-- night sky + floodlights -->
+          <rect x="0" y="0" width="900" height="196" fill="url(#skyGrad)"></rect>
+          <ellipse cx="105" cy="42" rx="135" ry="60" fill="url(#floodGlow)" opacity=".8"></ellipse>
+          <ellipse cx="795" cy="42" rx="135" ry="60" fill="url(#floodGlow)" opacity=".8"></ellipse>
+          <g fill="#0c1526">
+            <rect x="101" y="16" width="6" height="60"></rect>
+            <rect x="793" y="16" width="6" height="60"></rect>
+          </g>
+          <g fill="#fff6cf">
+            <circle cx="88" cy="22" r="4.6"></circle><circle cx="101" cy="22" r="4.6"></circle><circle cx="114" cy="22" r="4.6"></circle>
+            <circle cx="88" cy="36" r="4.6"></circle><circle cx="101" cy="36" r="4.6"></circle><circle cx="114" cy="36" r="4.6"></circle>
+            <circle cx="780" cy="22" r="4.6"></circle><circle cx="793" cy="22" r="4.6"></circle><circle cx="806" cy="22" r="4.6"></circle>
+            <circle cx="780" cy="36" r="4.6"></circle><circle cx="793" cy="36" r="4.6"></circle><circle cx="806" cy="36" r="4.6"></circle>
+          </g>
+          <!-- stand + crowd -->
+          <rect x="0" y="60" width="900" height="15" fill="#0a1322"></rect>
+          <rect x="0" y="75" width="900" height="121" fill="#1c2946"></rect>
+          <rect x="0" y="75" width="900" height="121" fill="url(#crowdPat)" opacity=".5"></rect>
+          <rect x="0" y="188" width="900" height="8" fill="#0a1322"></rect>
+          <!-- ad boards -->
+          <rect x="0" y="196" width="900" height="34" fill="#670e36"></rect>
+          <text x="450" y="219" text-anchor="middle" font-family="Archivo, sans-serif" font-size="16" font-weight="800" fill="#ffffff" letter-spacing="2">NICHOLAS AIRWAYS — WE FLY BALLS ANYWHERE · ROW Z TOURS</text>
+          <!-- pitch -->
+          <rect x="0" y="230" width="900" height="330" fill="url(#pitchGrad)"></rect>
+          <g fill="#ffffff" opacity=".05">
+            <rect x="0" y="230" width="900" height="37"></rect>
+            <rect x="0" y="304" width="900" height="44"></rect>
+            <rect x="0" y="392" width="900" height="54"></rect>
+            <rect x="0" y="500" width="900" height="60"></rect>
+          </g>
+          <ellipse cx="450" cy="560" rx="540" ry="150" fill="#ffffff" opacity=".05"></ellipse>
+          <line x1="36" y1="344" x2="864" y2="344" stroke="#ffffff" stroke-width="4" opacity=".75"></line>
+          <!-- goal net: sides + back -->
+          <polygon points="330,252 294,270 294,356 330,344" fill="#eaf4ff" opacity=".25"></polygon>
+          <polygon points="330,252 294,270 294,356 330,344" fill="url(#netPat)" opacity=".5"></polygon>
+          <polygon points="570,252 606,270 606,356 570,344" fill="#eaf4ff" opacity=".25"></polygon>
+          <polygon points="570,252 606,270 606,356 570,344" fill="url(#netPat)" opacity=".5"></polygon>
+          <rect x="330" y="252" width="240" height="92" fill="#eaf4ff" opacity=".16"></rect>
+          <rect x="330" y="252" width="240" height="92" fill="url(#netPat)" opacity=".5"></rect>
+          <!-- THE GOALKEEPER: a real man in kit, arms folded, bored — in the goal -->
+          <g transform="translate(450 344) scale(0.52) translate(-450 -344)">
+            <g id="keeper" aria-label="The goalkeeper, standing in the goal with arms folded, bored">
+              <ellipse cx="450" cy="346" rx="36" ry="6" fill="#000000" opacity=".28"></ellipse>
+              <rect x="429" y="336" width="19" height="8" rx="3.5" fill="#14161c"></rect>
+              <rect x="452" y="336" width="19" height="8" rx="3.5" fill="#14161c"></rect>
+              <rect x="435" y="288" width="12" height="50" rx="5" fill="#22252d"></rect>
+              <rect x="453" y="288" width="12" height="50" rx="5" fill="#22252d"></rect>
+              <rect x="431" y="264" width="38" height="27" rx="6" fill="#191c23"></rect>
+              <rect x="428" y="212" width="44" height="58" rx="10" fill="url(#keeperKit)"></rect>
+              <ellipse cx="441" cy="236" rx="9" ry="19" fill="#ffffff" opacity=".2"></ellipse>
+              <rect x="428" y="239" width="44" height="7" fill="#22101b" opacity=".85"></rect>
+              <line x1="431" y1="232" x2="467" y2="251" stroke="#d65400" stroke-width="10" stroke-linecap="round"></line>
+              <line x1="469" y1="232" x2="433" y2="251" stroke="#ef6200" stroke-width="10" stroke-linecap="round"></line>
+              <circle cx="468" cy="252" r="7" fill="#d90429" stroke="#8d0218" stroke-width="1.5"></circle>
+              <circle cx="432" cy="252" r="7" fill="#d90429" stroke="#8d0218" stroke-width="1.5"></circle>
+              <rect x="444" y="202" width="12" height="12" fill="#e8a06a"></rect>
+              <circle cx="436" cy="192" r="3" fill="#eda96e"></circle>
+              <circle cx="464" cy="192" r="3" fill="#eda96e"></circle>
+              <circle cx="450" cy="190" r="14" fill="url(#faceGrad)"></circle>
+              <path d="M435.8 189 a14.2 14.2 0 0 1 28.4 0 z" fill="#2e2119"></path>
+              <line x1="443" y1="192" x2="448" y2="192" stroke="#2a2019" stroke-width="2.2" stroke-linecap="round"></line>
+              <line x1="452" y1="192" x2="457" y2="192" stroke="#2a2019" stroke-width="2.2" stroke-linecap="round"></line>
+              <line x1="442" y1="187" x2="449" y2="186.4" stroke="#2a2019" stroke-width="1.8" stroke-linecap="round"></line>
+              <line x1="451" y1="186.4" x2="458" y2="187" stroke="#2a2019" stroke-width="1.8" stroke-linecap="round"></line>
+              <line x1="445" y1="201" x2="455" y2="200.4" stroke="#2a2019" stroke-width="2" stroke-linecap="round"></line>
+            </g>
+          </g>
+          <!-- goal frame -->
+          <rect x="330" y="252" width="240" height="92" fill="#ffffff" opacity=".07" stroke="url(#postGrad)" stroke-width="7"></rect>
+          <!-- penalty box markings -->
+          <path d="M268 344 L632 344 L714 514 L186 514" fill="none" stroke="#ffffff" stroke-width="4.5" opacity=".92"></path>
+          <path d="M374 344 L526 344 L556 424 L344 424" fill="none" stroke="#ffffff" stroke-width="3.5" opacity=".7"></path>
+          <path d="M392 476 A66 30 0 0 1 508 476" fill="none" stroke="#ffffff" stroke-width="4" opacity=".9"></path>
+          <ellipse cx="450" cy="452" rx="11" ry="4" fill="#ffffff"></ellipse>
+          <!-- NICHOLAS himself at the penalty spot — his REAL photo, mid-kick, No. 11 -->
+          <g id="playerPhoto">
+            <ellipse cx="322" cy="472" rx="128" ry="15" fill="#052a10" opacity=".35"></ellipse>
+            <image href="assets/asset-01-e631af5a9a.png" x="197" y="190" width="256" height="276" aria-label="Photo of Nicholas Abrar in his Aston Villa number 11 shirt, mid-kick, taking the penalty"></image>
+            <rect x="250" y="480" width="150" height="25" rx="12.5" fill="#22101b"></rect>
+            <text x="325" y="497" text-anchor="middle" font-family="Archivo, sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="2">NICHOLAS · 11</text>
+          </g>
+          <g id="dots"></g>
+          <g id="flyLayer"></g>
+        </svg>
+        <div class="keeper-bubble" id="keeperBubble">Shoot. I dare you. I won't move — I never have to.</div>
+        <div class="var-box" id="varBox">VAR CHECKING…</div>
+        <div class="goal-flash" id="goalFlash"><span>GOAL!</span></div>
+        <div class="crowd-react" id="crowdReact">THE CROWD: OOOOH!</div>
+        <div class="tap-hint">Tap the pitch to shoot</div>
+        </div>
+        <div class="game-bar">
+          <button class="btn btn-shoot" id="shootBtn" type="button">⚽ Shoot like Nicholas</button>
+          <button class="btn btn-chant" id="chantBtn" type="button" aria-pressed="true">🔊 Sound: ON</button>
+          <div class="game-score">Your shots: <span id="attCount">0</span> · On target: <span id="onTarget">0</span> · Goals: <span id="goalCount">0</span></div>
+          <p class="commentary" id="commentary">Penalty spot. Keeper's bored. History says: three fly out — the 4th goes in.</p>
+        </div>
+        <audio id="missChant" src="assets/asset-02-6455bd11a6.mp3" preload="auto"></audio>
+        <audio id="goalDj" src="assets/asset-03-92412ec941.mp3" preload="auto"></audio>
+        <audio id="crowdOooh" src="assets/asset-04-257bc94ac5.mp3" preload="auto"></audio>
+      </div>
+      <div class="live-strip" aria-live="polite">
+        <span class="live-badge">LIVE</span>
+        <p id="liveLine">12' — Referee nijei bujhtese na, eta shot chilo naki pass.</p>
+      </div>
+      <h3 class="display" style="font-size:1.45rem; margin:30px 0 4px">Funny stats — <span style="color:var(--claret)">the new math</span></h3>
+      <p style="color:var(--ink-soft); margin:0">Since the 4th-shot rule arrived, the numbers finally make sense. Sort of.</p>
+      <div class="stats-grid three">
+        <div class="stat">
+          <div class="num">100</div>
+          <div class="lbl">Shots Taken</div>
+          <div class="sub">Every single one struck with total belief and a prayer.</div>
+        </div>
+        <div class="stat">
+          <div class="num">25</div>
+          <div class="lbl">Goals Scored</div>
+          <div class="sub">Exactly 1 in every 4. The 4th shot is legally required to go in.</div>
+        </div>
+        <div class="stat">
+          <div class="num">0</div>
+          <div class="lbl">Goalkeeper Saves</div>
+          <div class="sub">Keepers have never saved him. The misses miss by themselves — and the 4th one is already in.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXCUSE GENERATOR -->
+    <section class="wrap" id="excuses">
+      <div class="sec-head">
+        <h2 class="display">The excuse <em>generator</em></h2>
+        <p>Every miss has a reason. Nicholas has a machine that makes them. Press the button — a fresh, 100% scientific excuse comes out. The striker has never repeated one. He has never needed to check.</p>
+      </div>
+      <div class="excuse-box">
+        <p class="excuse-text" id="excuseText">Press the button. An excuse is warming up.</p>
+        <p class="excuse-sub" id="excuseSub">Scientifically proven. By Nicholas.</p>
+        <button class="btn btn-shoot" id="excuseBtn" type="button">Generate excuse</button>
+        <span class="excuse-count">Excuses used: <span id="excuseCount">0</span> / ∞</span>
+      </div>
+    </section>
+
+    <!-- FUNNY SECTION: MATCHDAY REPORT -->
+    <div class="funny-band" id="funny">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="display">The funny section: <em>matchday madness</em></h2>
+          <p>A completely typical Nicholas Abrar match, reported live, minute by minute. No exaggeration was needed. The match provided everything.</p>
+        </div>
+        <div class="match-meta">
+          <span class="score">FULL TIME: Nicholas's Team 0 – 0 Everyone</span>
+          <span>Shots: 14</span>
+          <span>On target: 0</span>
+          <span>Keeper saves needed: 0</span>
+        </div>
+        <ol class="timeline">
+          <li>
+            <div class="min">1'</div>
+            <div>
+              <h3>Kick-off. First touch of the match.</h3>
+              <p>Nicholas receives the ball, looks up, and immediately passes it out of play. The crowd senses a classic is coming.</p>
+            </div>
+          </li>
+          <li>
+            <div class="min">7'</div>
+            <div>
+              <h3>First shot of the game — into the car park.</h3>
+              <p>Thirty yards from goal, he unleashes it. The ball clears the stand entirely. Somewhere outside, a car alarm joins the applause.</p>
+            </div>
+          </li>
+          <li>
+            <div class="min">23'</div>
+            <div>
+              <h3>Open goal. Two yards out. He shoots at the sky.</h3>
+              <p>The keeper is on the floor, the net is empty, the ball is in low orbit. Scientists later name the trajectory. The goal remains a rumour.</p>
+            </div>
+          </li>
+          <li>
+            <div class="min">41'</div>
+            <div>
+              <h3>He dribbles past three defenders — then tackles himself.</h3>
+              <p>Brilliant run, then his left foot fouls his right foot and he goes down. The referee waves play on. There was no one else involved.</p>
+            </div>
+          </li>
+          <li>
+            <div class="min">58'</div>
+            <div>
+              <h3>One-on-one with the keeper!</h3>
+              <p>The keeper, having read the scouting report, simply sits down on the goal line and waits. Correct decision: the shot goes six yards wide.</p>
+            </div>
+          </li>
+          <li>
+            <div class="min">76'</div>
+            <div>
+              <h3>PENALTY! This is the moment!</h3>
+              <p>The keeper doesn't even stand in the middle — he leans on the post, chatting with a fan. Nicholas steps up… and hits the corner flag. The corner flag. From twelve yards.</p>
+            </div>
+          </li>
+          <li>
+            <div class="min">90'</div>
+            <div>
+              <h3>Full time. The keeper is Man of the Match.</h3>
+              <p>Final whistle: 0–0. The opposition goalkeeper is named Man of the Match without touching the ball once. His gloves are still in their packaging.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="keeper-card">
+          <div class="gloves">SAVES<br />0 / 0</div>
+          <div>
+            <h3>Meet the goalkeeper: "Sleepy", the most relaxed man in football</h3>
+            <p>Career record against Nicholas: <b>14 shots faced, 0 saves required, 1 nap taken, 3 chapters of a novel finished.</b> "People ask if I study his shooting," Sleepy says. "I do. That's why I bring a chair." He has never dived against Nicholas. He has never needed to. The shots go outside — all of them, every time, like they have somewhere better to be.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GOALKEEPER'S DIARY -->
+    <section class="wrap" id="diary">
+      <div class="sec-head">
+        <h2 class="display">The goalkeeper's <em>diary</em></h2>
+        <p>Found in the dressing room. The opposition keeper has kept a diary of every match against Nicholas. It is not a long diary. It is a very relaxed one.</p>
+      </div>
+      <div class="diary-grid">
+        <div class="diary">
+          <div class="day">Matchday 1</div>
+          <p>"Ajkeo Abrar shoot marlo, ami ghumalam."</p>
+          <p style="color:var(--ink-soft); font-size:.9rem; font-style:normal; margin-top:8px">Today Abrar shot again, so I took a nap. Woke up at full-time. Clean sheet.</p>
+        </div>
+        <div class="diary">
+          <div class="day">Matchday 2</div>
+          <p>"Penalty hoise. Ami chair-ta goal-er shamnei rakhsi."</p>
+          <p style="color:var(--ink-soft); font-size:.9rem; font-style:normal; margin-top:8px">There was a penalty, so I put my chair right in front of the goal. The ball visited the car park instead.</p>
+        </div>
+        <div class="diary">
+          <div class="day">Matchday 3</div>
+          <p>"4 number shot-e goal hoilo. Ami bisshash korte pari nai."</p>
+          <p style="color:var(--ink-soft); font-size:.9rem; font-style:normal; margin-top:8px">The 4th shot went in. I could not believe it. I have asked NASA to confirm it was really the ball.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BALL'S JOURNEY + MISS MAP -->
+    <section class="wrap" id="journey">
+      <div class="sec-head">
+        <h2 class="display">The ball's <em>journey</em></h2>
+        <p>Every Nicholas shot begins the same way — and then leaves. Scientists, neighbours and one very tired pigeon have reconstructed the route. Here is the official Miss Map: where the balls actually land.</p>
+      </div>
+      <div class="journey-grid">
+        <div class="journey-step"><div class="n">1</div><h3>The Kick</h3><p>Full power. Full belief. Zero geography.</p></div>
+        <div class="journey-step"><div class="n">2</div><h3>The Stand</h3><p>Clears Row Z in under two seconds. Fans duck, then applaud.</p></div>
+        <div class="journey-step"><div class="n">3</div><h3>The Sky</h3><p>Enters the clouds. A pigeon changes its route forever.</p></div>
+        <div class="journey-step"><div class="n">4</div><h3>The Moon</h3><p>NASA begins tracking it as a "friendly object".</p></div>
+        <div class="journey-step"><div class="n">5</div><h3>Still Missing</h3><p>Last seen over the neighbour's roof. If found, please return to Nicholas.</p></div>
+      </div>
+      <svg class="missmap" viewBox="0 0 900 300" role="img" aria-label="The Miss Map: an illustrated night scene showing where Nicholas Abrar's shots land — the moon, orbit, Row Z, the car park and the neighbour's roof — everywhere except the goal">
+        <defs>
+          <linearGradient id="mmSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#101f3a"></stop>
+            <stop offset="1" stop-color="#3f6db3"></stop>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="900" height="300" fill="url(#mmSky)"></rect>
+        <g fill="#ffffff" opacity=".85">
+          <circle cx="60" cy="36" r="1.8"></circle><circle cx="180" cy="70" r="1.4"></circle>
+          <circle cx="330" cy="30" r="1.8"></circle><circle cx="470" cy="58" r="1.3"></circle>
+          <circle cx="620" cy="26" r="1.6"></circle><circle cx="700" cy="90" r="1.3"></circle>
+          <circle cx="250" cy="110" r="1.2"></circle><circle cx="540" cy="104" r="1.4"></circle>
+        </g>
+        <path d="M640 252 C 560 160, 720 120, 782 84" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="6 7" opacity=".55"></path>
+        <circle cx="790" cy="56" r="27" fill="#f4f1de"></circle>
+        <circle cx="780" cy="48" r="6" fill="#ddd8c2"></circle>
+        <circle cx="800" cy="66" r="4.5" fill="#ddd8c2"></circle>
+        <circle cx="790" cy="56" r="6" fill="#d21f4b" stroke="#ffffff" stroke-width="2"></circle>
+        <text x="790" y="112" text-anchor="middle" font-family="Archivo, sans-serif" font-size="13" font-weight="800" fill="#ffffff" style="paint-order:stroke" stroke="#101f3a" stroke-width="4">THE MOON — 2 balls</text>
+        <circle cx="120" cy="120" r="6" fill="#d21f4b" stroke="#ffffff" stroke-width="2"></circle>
+        <text x="120" y="100" text-anchor="middle" font-family="Archivo, sans-serif" font-size="13" font-weight="800" fill="#ffffff" style="paint-order:stroke" stroke="#101f3a" stroke-width="4">STILL IN ORBIT — 1 ball</text>
+        <g>
+          <rect x="70" y="216" width="120" height="62" fill="#0d1526"></rect>
+          <polygon points="60,216 130,182 200,216" fill="#081020"></polygon>
+          <rect x="112" y="238" width="26" height="40" fill="#16233c"></rect>
+          <rect x="146" y="228" width="20" height="20" fill="#ffc72c"></rect>
+          <path d="M146 228 L166 248 M166 228 L146 248" stroke="#7a5b12" stroke-width="2"></path>
+          <circle cx="88" cy="206" r="6" fill="#d21f4b" stroke="#ffffff" stroke-width="2"></circle>
+          <text x="130" y="162" text-anchor="middle" font-family="Archivo, sans-serif" font-size="13" font-weight="800" fill="#ffffff" style="paint-order:stroke" stroke="#101f3a" stroke-width="4">NEIGHBOUR'S ROOF &amp; WINDOW — 9 balls</text>
+        </g>
+        <g>
+          <rect x="392" y="242" width="86" height="26" rx="9" fill="#0d1526"></rect>
+          <rect x="408" y="228" width="46" height="18" rx="7" fill="#0d1526"></rect>
+          <circle cx="410" cy="268" r="7" fill="#05080f"></circle>
+          <circle cx="458" cy="268" r="7" fill="#05080f"></circle>
+          <circle cx="435" cy="222" r="6" fill="#d21f4b" stroke="#ffffff" stroke-width="2"></circle>
+          <text x="435" y="202" text-anchor="middle" font-family="Archivo, sans-serif" font-size="13" font-weight="800" fill="#ffffff" style="paint-order:stroke" stroke="#101f3a" stroke-width="4">CAR PARK — 6 balls</text>
+        </g>
+        <g>
+          <rect x="590" y="196" width="250" height="82" fill="#0d1526"></rect>
+          <rect x="606" y="182" width="218" height="14" fill="#081020"></rect>
+          <g fill="#fff6cf">
+            <circle cx="630" cy="172" r="3.4"></circle><circle cx="660" cy="172" r="3.4"></circle>
+            <circle cx="770" cy="172" r="3.4"></circle><circle cx="800" cy="172" r="3.4"></circle>
+          </g>
+          <rect x="690" y="222" width="52" height="34" fill="none" stroke="#ffffff" stroke-width="2.5" opacity=".8"></rect>
+          <circle cx="716" cy="210" r="6" fill="#d21f4b" stroke="#ffffff" stroke-width="2"></circle>
+          <text x="716" y="162" text-anchor="middle" font-family="Archivo, sans-serif" font-size="13" font-weight="800" fill="#ffffff" style="paint-order:stroke" stroke="#101f3a" stroke-width="4">ROW Z — 14 balls</text>
+          <text x="716" y="294" text-anchor="middle" font-family="Archivo, sans-serif" font-size="11.5" font-weight="700" fill="#cfe0f2">THE STADIUM — where every shot starts… and leaves</text>
+        </g>
+        <rect x="0" y="278" width="900" height="22" fill="#123c20"></rect>
+      </svg>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="wrap" id="reel">
+      <div class="sec-head">
+        <h2 class="display">Highlight <em>reel</em></h2>
+        <p>Scouts asked for his best moments. This is what arrived. Nineteen seconds that explain the entire career: the run-up, the shot, the fall.</p>
+      </div>
+      <div class="video-layout">
+        <div class="phone">
+          <video controls playsinline preload="metadata" poster="assets/asset-05-b1299d733c.jpg">
+            <source src="assets/asset-06-080a656abd.mp4" type="video/mp4" />
+            Your browser can't play this video — which, honestly, is also what the ball said.
+          </video>
+        </div>
+        <ul class="video-points">
+          <li><b>The run-up</b><span>Full speed, total focus, chest out. At this moment, anything is possible.</span></li>
+          <li><b>The shot</b><span>The ball departs in a direction scientists are still studying.</span></li>
+          <li><b>The fall</b><span>Gravity scores the only goal of the day. Nicholas goes down — the ball goes further.</span></li>
+          <li><b>The recovery</b><span>Gets up, dusts off, asks for the ball again. This is why the confidence stat is 99.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MY IDOL -->
+    <section class="wrap" id="idol">
+      <div class="sec-head">
+        <h2 class="display">My <em>idol</em></h2>
+        <p>Every legend has a teacher. Nicholas didn't learn missing by accident — he studied it under the master himself, the striker who proved you don't need to score to become famous. Then he took the name too.</p>
+      </div>
+      <div class="idol-layout">
+        <figure class="idol-photo">
+          <img src="assets/asset-07-143bf5d6c1.jpg" alt="Nicholas Abrar standing beside his football idol, both in Aston Villa jerseys, pointing at the camera with the Villa flag behind them" />
+          <figcaption>Nicholas with his idol. Same kit, same celebration, same complicated relationship with the goal. The student has become the master — of missing.</figcaption>
+        </figure>
+        <div>
+          <ul class="video-points" style="margin-top:0">
+            <li><b>The name</b><span>He didn't just copy the style — he took the name as well. Nicholas, meet Nicholas.</span></li>
+            <li><b>The celebration</b><span>Point at the camera, smile like you meant it. Practised in the mirror 400 times. Used after an actual goal: 0 times.</span></li>
+            <li><b>The finishing</b><span>Studied frame by frame, note by note, and copied with total accuracy. This, experts agree, is the entire problem.</span></li>
+            <li><b>The confidence</b><span>Miss, smile, ask for the ball again. The one lesson his idol taught that he truly mastered — 99, remember?</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOVES + CARTOON -->
+    <section class="wrap">
+      <div class="sec-head">
+        <h2 class="display">Signature <em>moves</em></h2>
+        <p>Techniques perfected over years of practice. Coaches have tried to unteach them. The moves refuse to leave.</p>
+      </div>
+      <div class="moves-layout">
+        <div>
+          <div class="move">
+            <h3>The Orbit Launcher <span class="tag">Finisher</span></h3>
+            <p>A shot so high it needs flight permission. Best performed from six yards out, with an open goal waiting below, ignored.</p>
+          </div>
+          <div class="move">
+            <h3>The Window Finder</h3>
+            <p>Some players find the top corner. Nicholas finds the top window of the house behind the stadium. Accuracy — just at the wrong target.</p>
+          </div>
+          <div class="move">
+            <h3>The Self-Tackle <span class="tag">As seen in video</span></h3>
+            <p>No defender required. Nicholas dribbles, Nicholas challenges, Nicholas wins the ball from Nicholas — and everyone ends up on the floor.</p>
+          </div>
+          <div class="move">
+            <h3>The Corner Flag Threat</h3>
+            <p>A shot from the penalty spot that somehow endangers the corner flag. Physicists have been called. They have no answers either.</p>
+          </div>
+        </div>
+        <figure class="evidence">
+          <img src="assets/asset-08-e287fe01eb.webp" alt="Cartoon of Nicholas blasting the ball over the goal toward a frightened moon while the goalkeeper reads a newspaper and his teammates facepalm" />
+          <figcaption>Artist's impression of a typical Nicholas shot. The artist confirms: "I changed nothing. This is just what happens."</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TRAINING ROUTINE -->
+    <section class="wrap" id="training">
+      <div class="sec-head">
+        <h2 class="display">Training <em>routine</em></h2>
+        <p>World-class players train for hours. Nicholas has perfected a routine so efficient it is over before breakfast — and so is the ball.</p>
+      </div>
+      <div class="routine-grid">
+        <div class="routine-step">
+          <span class="time">7:00 AM</span>
+          <h3>Sokale Uthbe — Wake Up</h3>
+          <p>Alarm bajbe, Nicholas uthbe. Ek chokh khule, arek chokh ghumiye — full striker focus. Ajke naki goal hobe. Kalkeo tai bolsilo.</p>
+        </div>
+        <div class="routine-step">
+          <span class="time">7:05 AM</span>
+          <h3>Ball-e Latthi — The Kick</h3>
+          <p>Ghum theke uthei soja math-e. Warm-up nai, stretch nai — direct ekta jore latthi. Confidence 99, aim ekhono ghumacche.</p>
+        </div>
+        <div class="routine-step">
+          <span class="time">7:06 AM</span>
+          <h3>Ball Akashe — Ball in the Sky</h3>
+          <p>Ball soja akashe. Goal-er dike jawar kono plan chilo na. Pakhi sore jay, megh sore jay — NASA notun kore track shuru kore.</p>
+        </div>
+        <div class="routine-step">
+          <span class="time">7:07 AM</span>
+          <h3>Abar Ghum — Back to Sleep</h3>
+          <p>Training shesh. Ball ekhono fireni, tai ar kichu korar nai. Nicholas bari giye abar ghum — kal sokale abar ek-i routine.</p>
+        </div>
+      </div>
+      <div class="routine-note">Total training time: 7 minutes. Total balls recovered: 0. <span>Coach's comment: "Or routine chhoto, kintu or miss gula boro."</span></div>
+    </section>
+
+    <!-- QUOTES -->
+    <section class="wrap">
+      <div class="sec-head">
+        <h2 class="display">What people <em>say</em></h2>
+        <p>Glowing reviews from everyone who has shared a pitch with him.</p>
+      </div>
+      <div class="quotes">
+        <blockquote>
+          <div class="stars" aria-label="Five stars">★★★★★</div>
+          <p>"I brought a chair and a newspaper to the goal. Best decision of my career. He has never once disturbed me."</p>
+          <footer>— The Opposition Goalkeeper</footer>
+        </blockquote>
+        <blockquote>
+          <div class="stars" aria-label="Five stars">★★★★★</div>
+          <p>"I've coached for twenty years. I've never seen a player miss the same goal in so many creative ways. It's almost art."</p>
+          <footer>— The Coach (retired early)</footer>
+        </blockquote>
+        <blockquote>
+          <div class="stars" aria-label="Five stars">★★★★★</div>
+          <p>"Please. I beg you. Aim at the big white rectangle. It's right there. It has been there the whole time."</p>
+          <footer>— The Ball</footer>
+        </blockquote>
+        <blockquote>
+          <div class="stars" aria-label="Five stars">★★★★★</div>
+          <p>"We sit in Row Z with umbrellas and catch souvenirs every match. Front row fans are jealous of us."</p>
+          <footer>— The Fans in the Back Row</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- RATE NICHOLAS -->
+    <section class="wrap" id="rate">
+      <div class="sec-head">
+        <h2 class="display">Rate <em>Nicholas</em></h2>
+        <p>You've seen the shots, read the diary, checked the Miss Map. Now make it official — give the striker a star rating. Be honest. He won't be: his confidence stays 99 whatever you tap.</p>
+      </div>
+      <div class="rate-box">
+        <div class="rate-stars" id="rateStars" aria-label="Rate Nicholas Abrar from 1 to 5 stars">
+          <button class="rate-star" type="button" data-star="1" aria-label="1 star">★</button>
+          <button class="rate-star" type="button" data-star="2" aria-label="2 stars">★</button>
+          <button class="rate-star" type="button" data-star="3" aria-label="3 stars">★</button>
+          <button class="rate-star" type="button" data-star="4" aria-label="4 stars">★</button>
+          <button class="rate-star" type="button" data-star="5" aria-label="5 stars">★</button>
+        </div>
+        <p class="rate-msg" id="rateMsg" aria-live="polite">Tap a star. The goalkeeper is watching — from his chair.</p>
+        <p class="rate-avg" id="rateAvg">Loading fan ratings…</p>
+        <p class="db-hint" id="rateDbHint" hidden>Offline right now — your rating is counted on this device only until the connection is back.</p>
+      </div>
+    </section>
+
+    <!-- REACTIONS: COACH, REFEREE, OPPONENT + STADIUM ANNOUNCEMENT -->
+    <section class="wrap" id="reactions">
+      <div class="sec-head">
+        <h2 class="display">Everyone <em>reacts</em></h2>
+        <p>A Nicholas shot is never just a shot. It is an event — and everyone inside the stadium has developed a reaction to it.</p>
+      </div>
+      <div class="announce"><b>Stadium announcement:</b> "Doya kore Abrar shoot marle math charben na — ball ashte pare!"<br /><span style="font-weight:600; font-size:.92rem">Translation: please do not leave the ground when Abrar shoots — a ball may arrive where you are sitting.</span></div>
+      <div class="quotes">
+        <blockquote>
+          <p>He holds his head, sits down slowly, and whispers the same words every single match: "Oke ami keno nilam?!"</p>
+          <footer>— The Coach ("Why did I sign him?!")</footer>
+        </blockquote>
+        <blockquote>
+          <p>He raises the whistle to blow for a goal kick, bursts out laughing instead, and asks the linesman: "Eta shoot chilo?"</p>
+          <footer>— The Referee ("Wait… was that a shot?")</footer>
+        </blockquote>
+        <blockquote>
+          <p>"O shoot marlei amra safe. Amra oijke shoot marte dei — ulta, amra oke encourage kori."</p>
+          <footer>— The Opposition Captain ("When he shoots, we are safe. We encourage it.")</footer>
+        </blockquote>
+        <blockquote>
+          <p>"Pa-e kono problem nai. Ami check korsi. Problem pa-e na — problem direction-e."</p>
+          <footer>— The Team Physio ("His leg is fine. The problem is the direction.")</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- FAN COMMENTS -->
+    <section class="wrap" id="fans">
+      <div class="sec-head">
+        <h2 class="display">Fan <em>comments</em></h2>
+        <p>The comments section under every match report. The fans are loyal, terrified, and extremely entertained.</p>
+      </div>
+      <div class="quotes">
+        <blockquote>
+          <p>"Oke goal-e na, akash-e pathano uchit!"</p>
+          <footer>— Rakib, Row Z regular ("Don't send him to the goal — send him to the sky!")</footer>
+        </blockquote>
+        <blockquote>
+          <p>"Ami proti match-e umbrella niye ashi. Ekbar ball amar coffee-te porse. Coffee shesh, ball hariye gese."</p>
+          <footer>— Sumon, front-row survivor</footer>
+        </blockquote>
+        <blockquote>
+          <p>"Amar chele match sheshe ball collect kore. Or collection-e ekhon 14 ta ball. Dhonnobad, Abrar bhai."</p>
+          <footer>— A proud father, probably</footer>
+        </blockquote>
+        <blockquote>
+          <p>"Goal hobe na — eta jani. Tobu ashi. Comedy show hishebe eta sera. Ticket-er dam othe."</p>
+          <footer>— Nadia, season-ticket holder</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- LEAVE A COMMENT -->
+    <section class="wrap" id="comments">
+      <div class="sec-head">
+        <h2 class="display">Your turn — <em>leave a comment</em></h2>
+        <p>Join the Row Z faithful. Add your name, drop your comment, and it goes straight onto the wall below — right next to the ball-shaped hole.</p>
+      </div>
+      <form class="comment-form" id="commentForm" novalidate>
+        <label for="cName">Your name</label>
+        <input class="field" id="cName" type="text" maxlength="40" placeholder="e.g. Rakib from Row Z" autocomplete="name" />
+        <label for="cText">Your comment</label>
+        <textarea class="field" id="cText" maxlength="300" placeholder="Say it like a fan who just ducked one of his shots…"></textarea>
+        <button class="btn btn-shoot" type="submit" id="commentSubmit">Post comment</button>
+        <p class="form-hint" id="formHint" aria-live="polite"></p>
+      </form>
+      <p class="comments-sync" id="commentsSync" aria-live="polite">Loading comments from all fans…</p>
+      <p class="db-hint" id="commentsDbHint" hidden style="margin:0 0 12px">Offline right now — comments are showing on this device only until the connection is back.</p>
+      <div class="comment-list" id="commentList">
+        <p class="comments-empty" id="commentsEmpty">No visitor comments yet. The wall is empty — unlike Row Z, which is full of his shots.</p>
+      </div>
+    </section>
+
+    <!-- MEME GALLERY -->
+    <section class="wrap" id="memes">
+      <div class="sec-head">
+        <h2 class="display">Meme <em>gallery</em></h2>
+        <p>The internet has seen his shots. The internet responded the only way it knows how.</p>
+      </div>
+      <div class="memes">
+        <figure class="meme">
+          <img src="assets/asset-08-e287fe01eb.webp" alt="Cartoon of Nicholas blasting the ball over the goal toward the moon" />
+          <figcaption>NASA is still looking for the ball</figcaption>
+        </figure>
+        <figure class="meme">
+          <img src="assets/asset-00-bebb9014f4.jpg" alt="Nicholas Abrar posing confidently in his Aston Villa jersey" />
+          <figcaption>Confidence: 99 · Goals: loading… since 2019</figcaption>
+        </figure>
+        <figure class="meme">
+          <img src="assets/asset-07-143bf5d6c1.jpg" alt="Nicholas Abrar standing beside his idol, both pointing at the camera" />
+          <figcaption>When the student out-misses the master</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="wrap" id="quiz">
+      <div class="sec-head">
+        <h2 class="display">The big <em>quiz</em></h2>
+        <p>One question. Ninety-nine percent of football fans answer it correctly. The other one percent is Nicholas.</p>
+      </div>
+      <div class="quiz-box">
+        <p class="quiz-q">Next shot-e Abrar goal korbe?</p>
+        <p style="color:var(--ink-soft); margin:0">Will Abrar score with the next shot? Choose wisely.</p>
+        <div class="quiz-btns">
+          <button class="btn btn-gold" id="quizYes" type="button">Yes, obosshoi!</button>
+          <button class="btn btn-shoot" id="quizNo" type="button">Na, impossible</button>
+        </div>
+        <p class="quiz-result" id="quizResult"></p>
+      </div>
+    </section>
+
+    <!-- POST-MATCH INTERVIEW -->
+    <section class="wrap" id="interview">
+      <div class="sec-head">
+        <h2 class="display">Post-match <em>interview</em></h2>
+        <p>Straight from the mixed zone. Nicholas faces the microphones with the confidence of a man who scored a hat-trick in a different universe.</p>
+      </div>
+      <div class="interview">
+        <div class="iv-row">
+          <p class="q"><span>REPORTER:</span> Nicholas, arekta miss. Ki bolben?</p>
+          <p class="a"><b>ABRAR:</b> "Ami goal dite chai nai. Ball-ke akash dekhate chaisi." — I didn't want to score. I wanted to show the ball the sky.</p>
+        </div>
+        <div class="iv-row">
+          <p class="q"><span>REPORTER:</span> Goalkeeper ghumacchilo. Apni ki kheyal korsen?</p>
+          <p class="a"><b>ABRAR:</b> "Oita or strategy. Amar strategy aro boro — ami nijei jani na ball kothay jabe. Keeper kemne janbe?"</p>
+        </div>
+        <div class="iv-row">
+          <p class="q"><span>REPORTER:</span> Fan-ra proti miss-e "oooooh" kore keno?</p>
+          <p class="a"><b>ABRAR:</b> "Oita tader bhalobasha. Ghorir kata-r moto — proti miss-e tara amake mone kore."</p>
+        </div>
+        <div class="iv-row">
+          <p class="q"><span>REPORTER:</span> Next match-er plan ki?</p>
+          <p class="a"><b>ABRAR:</b> "Same plan. Confidence 100. Ar goal? 4 number shot-e obosshoi ashbe. Math kokhono mittha bole na."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASK ABRAR -->
+    <section class="wrap" id="ask">
+      <div class="sec-head">
+        <h2 class="display">Ask <em>Abrar</em></h2>
+        <p>The press conference is open. Pick a question — the striker has answers. Confidence in every answer: 99. Accuracy: classified.</p>
+      </div>
+      <div class="ask-chips">
+        <button class="chip" type="button" data-ask="0">Tumi goal koro na ken?</button>
+        <button class="chip" type="button" data-ask="1">Tomar secret ki?</button>
+        <button class="chip" type="button" data-ask="2">Goalkeeper-ke bhoy paw?</button>
+        <button class="chip" type="button" data-ask="3">Next match-e goal hobe?</button>
+        <button class="chip" type="button" data-ask="4">Fan-ra ki bole?</button>
+      </div>
+      <div class="ask-answer" id="askAnswer">Ekta question select koro. Abrar microphone-er shamne ready.<small>— Nicholas Abrar, official press conference</small></div>
+    </section>
+
+    <!-- FERRAN YAHIA VS NICHOLAS ABRAR -->
+    <section class="wrap" id="versus">
+      <div class="sec-head">
+        <h2 class="display">Ferran Yahia <em>vs</em> Nicholas Abrar</h2>
+        <p>Two players. One table. Ferran plays proper football — but in every stat that truly matters (to Nicholas), there is only one winner.</p>
+      </div>
+      <div class="vs-head">
+        <div class="vs-player">
+          <img src="assets/asset-12-6888eb4b33.jpg" alt="Ferran Yahia in a white Real Madrid jersey" />
+          <div class="nm">Ferran Yahia</div>
+          <div class="team">Real Madrid kit · Actually aims at the goal</div>
+        </div>
+        <div class="vs-badge">VS</div>
+        <div class="vs-player">
+          <img src="assets/asset-00-bebb9014f4.jpg" alt="Nicholas Abrar in his Aston Villa jersey, fist raised" />
+          <div class="nm">Nicholas Abrar</div>
+          <div class="team">Aston Villa kit · Aims at the sky</div>
+        </div>
+      </div>
+      <table class="vs-table" aria-label="Funny stat comparison between Ferran Yahia and Nicholas Abrar">
+        <tr><td class="fv">2</td><td class="mid">Misses</td><td class="av">100</td></tr>
+        <tr><td class="fv">1</td><td class="mid">Balls sent to the sky</td><td class="av">99</td></tr>
+        <tr><td class="fv">0</td><td class="mid">Goalkeeper naps caused</td><td class="av">10</td></tr>
+        <tr><td class="fv">0</td><td class="mid">Windows broken</td><td class="av">27</td></tr>
+        <tr><td class="fv">3</td><td class="mid">Excuses ready at all times</td><td class="av">500</td></tr>
+        <tr><td class="fv">4</td><td class="mid">Crowd "ooooh"s caused</td><td class="av">312</td></tr>
+        <tr><td class="fv">0</td><td class="mid">Balls still in orbit</td><td class="av">2</td></tr>
+        <tr><td class="fv">88</td><td class="mid">Confidence</td><td class="av">99</td></tr>
+      </table>
+      <div class="vs-verdict">Final verdict: Ferran plays football. Nicholas plays with physics, weather and NASA's tracking system. Winner — Nicholas Abrar, in every stat that matters (to him).</div>
+    </section>
+
+    <!-- TRANSFER RUMORS -->
+    <section class="wrap" id="rumors">
+      <div class="sec-head">
+        <h2 class="display">Transfer <em>rumors</em></h2>
+        <p>The rumor mill never sleeps — mostly because it is laughing too hard. The latest whispers from the transfer window:</p>
+      </div>
+      <div class="rumors">
+        <article class="rumor">
+          <span class="tag">BREAKING RUMOR</span>
+          <h3>Barcelona want Abrar… to warm the bench</h3>
+          <p>Sources in Spain say Barça are preparing a bid for Nicholas Abrar — not for goals, but because their bench has never had a warmer, funnier man sitting on it. The bench, reportedly, is "very excited". The strikers are "not worried at all".</p>
+          <div class="src">Source: Trust Me Bro News · Reliability: 0%</div>
+        </article>
+        <article class="rumor">
+          <span class="tag">BREAKING RUMOR</span>
+          <h3>NASA FC enter the race</h3>
+          <p>After tracking his shots for three seasons, NASA's own team wants him signed. "He is the only striker whose attempts we can follow from space," said one scientist. "Also, two of our satellites are basically his ball boys now."</p>
+          <div class="src">Source: A Man At The Stadium · Reliability: 1%</div>
+        </article>
+        <article class="rumor">
+          <span class="tag">BREAKING RUMOR</span>
+          <h3>Window company makes record bid</h3>
+          <p>A local glass company has offered DOUBLE any football club's bid. "Every team he joins creates forty new customers for us," their director confirmed, measuring a window. "He is not a player. He is a business model."</p>
+          <div class="src">Source: The Neighbour's Cousin · Reliability: 99% (the neighbour insists)</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- HIRE ABRAR -->
+    <section class="wrap" id="hire">
+      <div class="sec-head">
+        <h2 class="display">Are you want to <em>hire Abrar?</em></h2>
+        <p>Yes — that is the exact question a club director asked last week. He is still thinking about it. Here is everything your club gets if you make the brave decision.</p>
+      </div>
+      <div class="hire-grid">
+        <ul class="video-points" style="margin-top:0">
+          <li><b>Goals included: 0</b><span>Guaranteed in writing. Your scoreboard operator can take matches off.</span></li>
+          <li><b>Entertainment: unlimited</b><span>Every shot is an event. Fans come for the football and stay for the geography lesson.</span></li>
+          <li><b>Two rested goalkeepers per match</b><span>Yours gets a holiday. Theirs gets a nap. Everyone wins except the scoreboard.</span></li>
+          <li><b>Row Z fan engagement programme</b><span>Free souvenirs, delivered at high speed, directly to the back rows. Helmets recommended.</span></li>
+          <li><b>Local economy boost</b><span>Window repairs, ball sales, car alarms — your stadium district will boom like never before.</span></li>
+        </ul>
+        <div class="apply-card">
+          <h3>Official job application</h3>
+          <div class="apply-row"><span>Name</span><span>Nicholas Abrar</span></div>
+          <div class="apply-row"><span>Position applied for</span><span>Striker (self-declared)</span></div>
+          <div class="apply-row"><span>Experience</span><span>47 matches · 312 shots · 0 goals</span></div>
+          <div class="apply-row"><span>Special skill</span><span>Missing from any distance</span></div>
+          <div class="apply-row"><span>Salary demand</span><span>One biryani per match (negotiable)</span></div>
+          <div class="apply-row"><span>Availability</span><span>Immediately. Desperately.</span></div>
+          <a class="btn btn-gold" href="mailto:abrarmahamud0@gmail.com?subject=Hiring%20Nicholas%20Abrar%20(the%20striker)">Hire Abrar — brave decision</a>
+          <p class="apply-note">Warning: side effects include balls in orbit, corner flags in danger, and a goalkeeper who will demand a chair in his contract.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TROPHY CABINET -->
+    <section class="wrap" id="cabinet">
+      <div class="sec-head">
+        <h2 class="display">The trophy <em>cabinet</em></h2>
+        <p>Behold the cabinet. Years of dedication, hundreds of shots, dozens of windows — and it has been filled with… atmosphere.</p>
+      </div>
+      <div class="cabinet" role="img" aria-label="An empty wooden trophy cabinet with dusty shelves and a label reading: 0 trophies, 100 misses, 1 legend">
+        <div class="cabinet-label">0 trophies · 100 misses · 1 legend</div>
+        <div class="shelf"><span class="dust">Empty. A spider lives here now. He also has more clean sheets than goals against him.</span></div>
+        <div class="shelf"><span class="dust">This shelf is reserved for the Golden Boot. It is very patient.</span></div>
+        <div class="shelf"><span class="dust">Dust — collected over 47 matches, completely untouched by trophies.</span></div>
+      </div>
+    </section>
+
+    <!-- HONOURS -->
+    <section class="wrap">
+      <div class="sec-head">
+        <h2 class="display">Honours &amp; <em>awards</em></h2>
+        <p>A trophy cabinet like no other. Mostly because the trophies are shaped like windows and moons.</p>
+      </div>
+      <div class="honours">
+        <div class="honour">
+          <div class="trophy">ROW Z MVP</div>
+          <h3>Most Shots Into the Stands</h3>
+          <p>Three seasons running. The award ceremony ball also went into the stands.</p>
+        </div>
+        <div class="honour">
+          <div class="trophy">NASA AWARD</div>
+          <h3>Ball Furthest From Earth</h3>
+          <p>Presented after officials confirmed one of his shots achieved a stable orbit.</p>
+        </div>
+        <div class="honour">
+          <div class="trophy">GOLDEN BOOT*</div>
+          <h3>*Returned</h3>
+          <p>He tried to kick it in celebration and sent it over the stadium. It has not been found.</p>
+        </div>
+      </div>
+
+      <div class="cta">
+        <h2 class="display">Book Nicholas for your team</h2>
+        <p>Guaranteed: zero goals, maximum entertainment, and a 40% discount at the local window repair shop. Your keeper will finally get some rest — theirs will too.</p>
+        <a class="btn btn-gold" href="mailto:abrarmahamud0@gmail.com?subject=Booking%20Nicholas%20Abrar%20(the%20striker)">Make an offer he can't aim at</a>
+      </div>
+    </section>
+
+    <footer class="page">
+      <div class="wrap">Nicholas Abrar · Striker · "The goals are coming." — Nicholas, every week since forever.</div>
+    </footer>
+
+    <button class="bgm-toggle" id="bgmToggle" type="button" aria-pressed="true">🎵 BGM: ON</button>
+    <audio id="introBgm" src="assets/asset-14-7778098e83.mp3" preload="auto"></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+      // Duplicate ticker content so the loop is seamless
+      var track = document.getElementById('tickerTrack');
+      track.innerHTML += track.innerHTML;
+
+      // Shot landing zones — everywhere except the goal and Nicholas himself
+      var dots = document.getElementById('dots');
+      var GOAL = { x1: 318, y1: 244, x2: 582, y2: 352 };
+      var PLAYER = { x1: 182, y1: 176, x2: 468, y2: 490 };
+      function inBox(x, y, b, pad) { return x > b.x1 - pad && x < b.x2 + pad && y > b.y1 - pad && y < b.y2 + pad; }
+      function outsideGoal() {
+        var x, y, tries = 0;
+        do {
+          x = 16 + Math.random() * 868;
+          y = 16 + Math.random() * 500;
+          tries++;
+        } while ((inBox(x, y, GOAL, 8) || inBox(x, y, PLAYER, 4)) && tries < 40);
+        return { x: x, y: y };
+      }
+      function goalTarget() {
+        var leftSide = Math.random() < 0.5;
+        return {
+          x: leftSide ? 348 + Math.random() * 66 : 486 + Math.random() * 60,
+          y: 264 + Math.random() * 68
+        };
+      }
+      function addDot(x, y, r, isGoal) {
+        var c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        c.setAttribute('cx', x); c.setAttribute('cy', y); c.setAttribute('r', r || 5);
+        c.setAttribute('class', isGoal ? 'dot goal-dot' : 'dot');
+        dots.appendChild(c);
+      }
+      for (var i = 0; i < 26; i++) { var p = outsideGoal(); addDot(p.x, p.y); }
+
+      // Shooting game
+      var lines = [
+        "Row Z! A fan caught it with his chips. He didn't even stand up.",
+        "NASA has been notified. Again.",
+        "That one hit a window two streets away. The window was closed. It isn't anymore.",
+        "The corner flag is down. The corner flag was not the target. Nothing was the target.",
+        "Over the bar, over the stand, into legend.",
+        "The keeper just checked his phone. Full battery of confidence.",
+        "It landed in the car park. Someone's alarm is going off.",
+        "So close! (It was not close.)",
+        "The ball boy has filed for overtime pay.",
+        "Commentator: 'And Abrar shoots—' ...he has stopped finishing that sentence.",
+        "A pigeon has been relocated by that shot.",
+        "Statisticians have added a new category just for this: 'elsewhere'."
+      ];
+      var goalLines = [
+        "IT'S IN!!! THE ACTUAL NET! Scientists are checking if this is real!",
+        "GOOOAL! The 4th-shot rule strikes again! Somewhere tonight, a window stays safe.",
+        "THE NET MOVED — because the ball HIT it! Historians are writing this down!",
+        "HE SCORED! The keeper is demanding a VAR check on reality itself!"
+      ];
+      var goalTaunts = [
+        "…I moved. It didn't help.",
+        "Fine. ONE. Don't get used to it.",
+        "I was tying my glove. Doesn't count.",
+        "The 4th one always does this. I hate the 4th one."
+      ];
+      var attempts = 0, lineIdx = 0, goals = 0;
+      var btn = document.getElementById('shootBtn');
+      var attEl = document.getElementById('attCount');
+      var goalEl = document.getElementById('goalCount');
+      var onTargetEl = document.getElementById('onTarget');
+      var comm = document.getElementById('commentary');
+      var flyLayer = document.getElementById('flyLayer');
+      var bubble = document.getElementById('keeperBubble');
+      var playerPhoto = document.getElementById('playerPhoto');
+      var keeperEl = document.getElementById('keeper');
+      var varBox = document.getElementById('varBox');
+      var goalFlash = document.getElementById('goalFlash');
+      var crowdReact = document.getElementById('crowdReact');
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      var taunts = [
+        "I didn't even move.",
+        "Again? Really?",
+        "My gloves are bored.",
+        "Row Z. Classic.",
+        "I could nap here.",
+        "Was that a shot?",
+        "Still zero. Still standing.",
+        "Nice pass — to nobody.",
+        "The moon says thanks.",
+        "I brought a chair for a reason."
+      ];
+      // Game sounds: miss chant, crowd oooh, and the Visca Barça goal DJ
+      var chant = document.getElementById('missChant');
+      var goalDj = document.getElementById('goalDj');
+      var oooh = document.getElementById('crowdOooh');
+      var chantBtn = document.getElementById('chantBtn');
+      var soundOn = true;
+      // Every game sound plays ONCE per trigger and lasts at most ~3 seconds:
+      // no looping, no stacking — a hard stop timer enforces the 3s cap.
+      var sfxTimers = {};
+      var chantDelay = null;
+      var sfxStopTimer = null;
+      function stopSfx(el) {
+        if (!el) return;
+        try { el.pause(); } catch (e) {}
+        if (sfxTimers[el.id]) { clearTimeout(sfxTimers[el.id]); sfxTimers[el.id] = null; }
+      }
+      function stopAllSfx() {
+        [chant, goalDj, oooh].forEach(stopSfx);
+        if (chantDelay) { clearTimeout(chantDelay); chantDelay = null; }
+        if (sfxStopTimer) { clearTimeout(sfxStopTimer); sfxStopTimer = null; }
+      }
+      function playAudio(el) {
+        if (!soundOn || !el) return;
+        try {
+          stopSfx(el);
+          el.loop = false;
+          el.currentTime = 0;
+          var pr = el.play();
+          if (pr && pr.catch) pr.catch(function () {});
+          sfxTimers[el.id] = setTimeout(function () {
+            try { el.pause(); el.currentTime = 0; } catch (e) {}
+          }, 3000);
+        } catch (e) {}
+      }
+      chantBtn.addEventListener('click', function (ev) {
+        ev.stopPropagation();
+        soundOn = !soundOn;
+        chantBtn.textContent = soundOn ? '🔊 Sound: ON' : '🔇 Sound: OFF';
+        chantBtn.setAttribute('aria-pressed', soundOn ? 'true' : 'false');
+        if (!soundOn) stopAllSfx();
+      });
+
+      // VAR — checks sometimes. The decision never changes.
+      var varTimers = [];
+      function runVar() {
+        varTimers.forEach(clearTimeout); varTimers = [];
+        varBox.textContent = 'VAR CHECKING…';
+        varBox.classList.remove('decision');
+        varBox.classList.add('show');
+        varTimers.push(setTimeout(function () {
+          varBox.textContent = 'VAR DECISION: STILL MISS';
+          varBox.classList.add('decision');
+        }, 900));
+        varTimers.push(setTimeout(function () { varBox.classList.remove('show'); }, 2500));
+      }
+
+      // Crowd reaction banner
+      var crowdTimer = null;
+      function crowdSays(text, isGoal) {
+        crowdReact.textContent = text;
+        crowdReact.classList.toggle('goal', !!isGoal);
+        crowdReact.classList.add('show');
+        if (crowdTimer) clearTimeout(crowdTimer);
+        crowdTimer = setTimeout(function () { crowdReact.classList.remove('show'); }, 2600);
+      }
+
+      // GOAL! flash
+      var flashTimer = null;
+      function flashGoal() {
+        goalFlash.classList.remove('show');
+        void goalFlash.offsetWidth;
+        goalFlash.classList.add('show');
+        if (flashTimer) clearTimeout(flashTimer);
+        flashTimer = setTimeout(function () { goalFlash.classList.remove('show'); }, 1550);
+      }
+
+      // The keeper finally moves — only ever for the 4th shot
+      function keeperDives() {
+        if (reduced || !keeperEl) return;
+        keeperEl.classList.remove('diving');
+        void keeperEl.getBoundingClientRect();
+        keeperEl.classList.add('diving');
+        setTimeout(function () { keeperEl.classList.remove('diving'); }, 720);
+      }
+
+      var bubbleTimer = null;
+      function keeperSays(text) {
+        bubble.textContent = text;
+        bubble.classList.add('show');
+        if (bubbleTimer) clearTimeout(bubbleTimer);
+        bubbleTimer = setTimeout(function () { bubble.classList.remove('show'); }, 2300);
+      }
+      // Greet the visitor
+      setTimeout(function () { keeperSays("Shoot. I dare you. I won't move — I never have to."); }, 600);
+
+      function kickAnimation() {
+        if (reduced || !playerPhoto) return;
+        var start = null;
+        function kstep(ts) {
+          if (!start) start = ts;
+          var t = Math.min((ts - start) / 320, 1);
+          var ang = Math.sin(t * Math.PI) * -7;
+          playerPhoto.setAttribute('transform', 'rotate(' + ang + ' 322 466)');
+          if (t < 1) requestAnimationFrame(kstep);
+          else playerPhoto.setAttribute('transform', 'rotate(0 322 466)');
+        }
+        requestAnimationFrame(kstep);
+      }
+
+      function shoot() {
+        attempts++;
+        attEl.textContent = attempts;
+        // One shot = one sound burst, ~3 seconds total, never stacked or looped
+        stopAllSfx();
+        var isGoal = attempts % 4 === 0;
+        var target = isGoal ? goalTarget() : outsideGoal();
+        kickAnimation();
+        if (isGoal) {
+          goals++;
+          goalEl.textContent = goals;
+          onTargetEl.textContent = goals;
+          keeperSays(goalTaunts[(goals - 1) % goalTaunts.length]);
+          comm.textContent = goalLines[(goals - 1) % goalLines.length];
+          keeperDives();
+          flashGoal();
+          crowdSays('THE CROWD: VISCA BARÇA! VISCA BARÇA!', true);
+          playAudio(goalDj);
+        } else {
+          keeperSays(taunts[(attempts - 1) % taunts.length]);
+          if (attempts === 10) {
+            comm.textContent = "10 shots in and the pattern holds: out, out, out, IN. Nicholas is proud of you. The keeper has ordered a coffee.";
+          } else {
+            comm.textContent = lines[lineIdx % lines.length];
+            lineIdx++;
+          }
+          crowdSays('THE CROWD: OOOOH!', false);
+          // Oooh first, then the name chant once — both cut off together at ~3s
+          playAudio(oooh);
+          chantDelay = setTimeout(function () { playAudio(chant); }, 900);
+          sfxStopTimer = setTimeout(function () { stopAllSfx(); }, 3000);
+          if (attempts > 1 && Math.random() < 0.3) runVar();
+        }
+        if (reduced) { addDot(target.x, target.y, 6, isGoal); return; }
+        var ball = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        ball.setAttribute('r', 11); ball.setAttribute('class', 'ball-fly');
+        ball.setAttribute('cx', 420); ball.setAttribute('cy', 430);
+        flyLayer.appendChild(ball);
+        var start = null, dur = isGoal ? 520 : 580;
+        function step(ts) {
+          if (!start) start = ts;
+          var t = Math.min((ts - start) / dur, 1);
+          var ease = 1 - Math.pow(1 - t, 2);
+          var x = 420 + (target.x - 420) * ease;
+          var y = 430 + (target.y - 430) * ease - Math.sin(t * Math.PI) * 55;
+          ball.setAttribute('cx', x); ball.setAttribute('cy', y);
+          ball.setAttribute('r', 11 - 5 * t);
+          if (t < 1) { requestAnimationFrame(step); }
+          else { flyLayer.removeChild(ball); addDot(target.x, target.y, 6, isGoal); }
+        }
+        requestAnimationFrame(step);
+      }
+
+      btn.addEventListener('click', shoot);
+      document.getElementById('stageWrap').addEventListener('click', shoot);
+
+      // Live commentary ticker — rotates all match long
+      var liveLines = [
+        "12' — Referee nijei bujhtese na, eta shot chilo naki pass.",
+        "89' — Abrar shoot marlo… ball ekhon Chand-e.",
+        "67' — Goalkeeper chair-e boshe cha khacche. Kono tension nai.",
+        "45' — Crowd umbrella khule boshe ase. Safety first.",
+        "23' — Ball pasher barir chade porse. Bariwala ekhono shocked.",
+        "78' — VAR check holo. Result: Still Miss.",
+        "90+2' — NASA ball-ta track kortese. Orao impressed."
+      ];
+      var liveEl = document.getElementById('liveLine');
+      var liveIdx = 0;
+      setInterval(function () {
+        liveIdx = (liveIdx + 1) % liveLines.length;
+        liveEl.textContent = liveLines[liveIdx];
+      }, 4200);
+
+      // Excuse generator
+      var excuses = [
+        ["Hawa beshi chilo!", "The wind was way too strong. Blame the weather, never the striker."],
+        ["Boot-e pathor dhukse!", "A stone got inside the boot. A tiny stone. A huge miss."],
+        ["Goalkeeper jadu korse!", "The keeper used magic. There is no other scientific explanation."],
+        ["Ball-ta beshi halka chilo!", "The ball was too light — that's why it flew straight into the sky."],
+        ["Ami ashole pass disilam!", "That was not a shot. That was a pass. To someone. Somewhere. In orbit."],
+        ["Goalpost-ta sore gese!", "The goalpost moved. It was definitely not there when he aimed."],
+        ["Crowd-er noise-e concentrate korte pari nai!", "The crowd was too loud. All three of them."],
+        ["Surjer alo chokhe lagse!", "The sun was in his eyes. (The match was played at night.)"],
+        ["Pitch-er ghaas ulta dike chilo!", "The grass was facing the wrong way. Classic pitch betrayal."],
+        ["Eta warm-up shot chilo!", "That was just the warm-up. The real shot is coming. Any year now."],
+        ["Referee amar biruddhe!", "The referee has been against him since birth. Probably."],
+        ["Paaye halka betha chilo!", "Slight leg pain. Very slight. Invisible, actually."]
+      ];
+      var excuseText = document.getElementById('excuseText');
+      var excuseSub = document.getElementById('excuseSub');
+      var excuseCountEl = document.getElementById('excuseCount');
+      var excuseCount = 0, lastExcuse = -1;
+      document.getElementById('excuseBtn').addEventListener('click', function () {
+        var idx;
+        do { idx = Math.floor(Math.random() * excuses.length); } while (idx === lastExcuse);
+        lastExcuse = idx;
+        excuseText.textContent = excuses[idx][0];
+        excuseSub.textContent = excuses[idx][1];
+        excuseCount++;
+        excuseCountEl.textContent = excuseCount;
+      });
+
+      // Quiz — will Abrar score with the next shot?
+      var quizResult = document.getElementById('quizResult');
+      document.getElementById('quizYes').addEventListener('click', function () {
+        quizResult.textContent = "WRONG! Sweet, innocent, completely wrong. (Unless it's the 4th shot — in that case, take a bow, genius.)";
+      });
+      document.getElementById('quizNo').addEventListener('click', function () {
+        quizResult.textContent = "CORRECT! You know football. The ball has already waved goodbye to the stadium.";
+      });
+
+      // Ask Abrar — preset questions, deeply unserious answers
+      var askAnswers = [
+        "Goal kora easy. Miss kora ekta art — ar ami ekjon artist.",
+        "Confidence 99, aim 2. Baki-ta hawa-r upor chere dei.",
+        "Ami bhoy pai na. Goalkeeper ghumay — oita tar nijer risk.",
+        "Hobe. Proti 4th shot-e hoy. Math kokhono mittha bole na.",
+        "Fan-ra umbrella niye ashe. Oitai amar proti tader respect."
+      ];
+      var askAnswer = document.getElementById('askAnswer');
+      var chips = document.querySelectorAll('.chip[data-ask]');
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          chips.forEach(function (c) { c.classList.remove('active'); });
+          chip.classList.add('active');
+          var idx = parseInt(chip.getAttribute('data-ask'), 10);
+          askAnswer.innerHTML = askAnswers[idx] + '<small>— Nicholas Abrar, official press conference</small>';
+        });
+      });
+
+      // Intro DJ song about Nicholas Abrar — plays ONCE when the site opens, never loops.
+      // Browsers may block autoplay with sound, so if the first attempt is blocked it
+      // starts on the visitor's very first interaction (tap, click, key or scroll).
+      var bgm = document.getElementById('introBgm');
+      var bgmToggle = document.getElementById('bgmToggle');
+      var bgmOn = true;
+      var bgmStarted = false;
+      if (bgm) bgm.loop = false;
+      function tryBgm() {
+        if (!bgmOn || !bgm || bgmStarted) return;
+        try {
+          bgm.currentTime = 0;
+          var pr = bgm.play();
+          if (pr && pr.then) {
+            pr.then(function () { bgmStarted = true; removeBgmKick(); }).catch(function () {});
+          } else { bgmStarted = true; removeBgmKick(); }
+        } catch (e) {}
+      }
+      function bgmKick() { tryBgm(); }
+      function removeBgmKick() {
+        document.removeEventListener('pointerdown', bgmKick);
+        document.removeEventListener('touchstart', bgmKick);
+        document.removeEventListener('keydown', bgmKick);
+        document.removeEventListener('scroll', bgmKick);
+      }
+      tryBgm();
+      document.addEventListener('pointerdown', bgmKick);
+      document.addEventListener('touchstart', bgmKick, { passive: true });
+      document.addEventListener('keydown', bgmKick);
+      document.addEventListener('scroll', bgmKick, { passive: true });
+      if (bgm) bgm.addEventListener('ended', function () { bgmStarted = true; removeBgmKick(); });
+      bgmToggle.addEventListener('click', function () {
+        bgmOn = !bgmOn;
+        bgmToggle.textContent = bgmOn ? '🎵 BGM: ON' : '🔇 BGM: OFF';
+        bgmToggle.setAttribute('aria-pressed', bgmOn ? 'true' : 'false');
+        if (bgmOn) { bgmStarted = false; tryBgm(); }
+        else if (bgm) { bgm.pause(); bgmStarted = false; }
+      });
+
+      // ---- Shared ratings & comments (Supabase) ----
+      // Everyone sees everyone's ratings and comments. If Supabase can't be
+      // reached, the page falls back to this-visit-only behaviour + an offline hint.
+      var SB_URL = 'https://zlccmcuvotfnyawolqac.supabase.co';
+      var SB_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpsY2NtY3V2b3Rmbnlhd29scWFjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1OTQ4NTYsImV4cCI6MjEwODE3MDg1Nn0.aWo0LSwujfjrnJ5GSeasa4pFxzJ20tTkxztpNboOLFs';
+      var sb = null;
+      try {
+        if (window.supabase && window.supabase.createClient) sb = window.supabase.createClient(SB_URL, SB_ANON);
+      } catch (e) { sb = null; }
+      var sbOnline = !!sb;
+      var rateDbHint = document.getElementById('rateDbHint');
+      var commentsDbHint = document.getElementById('commentsDbHint');
+      var commentsSync = document.getElementById('commentsSync');
+      function showOfflineHints() {
+        if (rateDbHint) rateDbHint.hidden = false;
+        if (commentsDbHint) commentsDbHint.hidden = false;
+        if (commentsSync) commentsSync.textContent = '';
+      }
+      function hideOfflineHints() {
+        if (rateDbHint) rateDbHint.hidden = true;
+        if (commentsDbHint) commentsDbHint.hidden = true;
+      }
+      function whenLabel(iso) {
+        if (!iso) return '· just now';
+        var then = new Date(iso).getTime();
+        if (isNaN(then)) return '· just now';
+        var mins = Math.floor((Date.now() - then) / 60000);
+        if (mins < 1) return '· just now';
+        if (mins < 60) return '· ' + mins + (mins === 1 ? ' min ago' : ' mins ago');
+        var hrs = Math.floor(mins / 60);
+        if (hrs < 24) return '· ' + hrs + (hrs === 1 ? ' hr ago' : ' hrs ago');
+        var days = Math.floor(hrs / 24);
+        if (days < 7) return '· ' + days + (days === 1 ? ' day ago' : ' days ago');
+        return '· ' + new Date(iso).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+      }
+
+      // Rate Nicholas — tappable stars, shared fan average from Supabase
+      var rateStars = document.querySelectorAll('#rateStars .rate-star');
+      var rateMsg = document.getElementById('rateMsg');
+      var rateAvg = document.getElementById('rateAvg');
+      var rateLines = [
+        '',
+        'ONE star?! Even the goalkeeper laughed — and he was asleep.',
+        'Two stars. Harsh but fair. The ball is still in orbit, after all.',
+        'Three stars. Aim: 2. Confidence: 99. The entertainment drags the average up.',
+        'Four stars! Row Z is on its feet. (Ducking, but on its feet.)',
+        'FIVE STARS! Incredible scenes. Nicholas definitely did not rate himself.'
+      ];
+      var rateSum = 0, rateCount = 0, myRate = 0, myRatingId = null, rateSaving = false;
+      function renderRateAvg() {
+        if (!rateCount) { rateAvg.textContent = 'No ratings yet — yours could be the first.'; return; }
+        var avg = (rateSum / rateCount).toFixed(1);
+        rateAvg.textContent = 'Fan rating: ' + avg + ' / 5 · from ' + rateCount + (rateCount === 1 ? ' rating' : ' ratings') + ' — from fans everywhere';
+      }
+      function paintStars(n) {
+        rateStars.forEach(function (s) {
+          s.classList.toggle('filled', parseInt(s.getAttribute('data-star'), 10) <= n);
+        });
+      }
+      function setStarsDisabled(dis) {
+        rateStars.forEach(function (s) { s.disabled = dis; });
+      }
+      function loadRatings() {
+        if (!sb) { sbOnline = false; showOfflineHints(); renderRateAvg(); return Promise.resolve(); }
+        return sb.from('nicholas_ratings').select('stars').then(function (res) {
+          if (res.error) throw res.error;
+          rateSum = 0; rateCount = 0;
+          (res.data || []).forEach(function (r) {
+            var v = parseInt(r.stars, 10);
+            if (v >= 1 && v <= 5) { rateSum += v; rateCount++; }
+          });
+          // My own rating from this visit is tracked by its row id, so it is
+          // already inside the totals above — nothing extra to add.
+          sbOnline = true; hideOfflineHints(); renderRateAvg();
+        }).catch(function () {
+          sbOnline = false; showOfflineHints(); renderRateAvg();
+        });
+      }
+      rateStars.forEach(function (star) {
+        var val = parseInt(star.getAttribute('data-star'), 10);
+        star.addEventListener('mouseenter', function () { paintStars(val); });
+        star.addEventListener('mouseleave', function () { paintStars(myRate); });
+        star.addEventListener('focus', function () { paintStars(val); });
+        star.addEventListener('blur', function () { paintStars(myRate); });
+        star.addEventListener('click', function () {
+          if (rateSaving || val === myRate) { paintStars(val); rateMsg.textContent = rateLines[val]; return; }
+          var prevRate = myRate;
+          myRate = val;
+          paintStars(val);
+          rateMsg.textContent = rateLines[val];
+          if (!sb || !sbOnline) {
+            // Offline fallback: this-visit-only average, exactly as before.
+            if (prevRate) { rateSum -= prevRate; } else { rateCount++; }
+            rateSum += val;
+            renderRateAvg();
+            return;
+          }
+          rateSaving = true; setStarsDisabled(true);
+          var done = function () { rateSaving = false; setStarsDisabled(false); paintStars(myRate); };
+          var fail = function () {
+            // Save failed — go offline and count it locally instead.
+            sbOnline = false; showOfflineHints();
+            if (prevRate) { rateSum -= prevRate; } else { rateCount++; }
+            rateSum += val;
+            renderRateAvg();
+            done();
+          };
+          if (myRatingId) {
+            sb.from('nicholas_ratings').update({ stars: val }).eq('id', myRatingId).then(function (res) {
+              if (res.error) { fail(); return; }
+              loadRatings().then(done);
+            }).catch(fail);
+          } else {
+            sb.from('nicholas_ratings').insert({ stars: val }).select('id').single().then(function (res) {
+              if (res.error) { fail(); return; }
+              if (res.data && res.data.id) myRatingId = res.data.id;
+              loadRatings().then(done);
+            }).catch(fail);
+          }
+        });
+      });
+
+      // Visitor comments — name + comment, shared with every visitor via Supabase
+      var commentForm = document.getElementById('commentForm');
+      var cName = document.getElementById('cName');
+      var cText = document.getElementById('cText');
+      var formHint = document.getElementById('formHint');
+      var commentList = document.getElementById('commentList');
+      var commentSubmit = document.getElementById('commentSubmit');
+      var localComments = [];
+      function buildCommentItem(name, text, iso) {
+        var item = document.createElement('div');
+        item.className = 'comment-item';
+        var head = document.createElement('div');
+        head.className = 'c-head';
+        var nm = document.createElement('span');
+        nm.className = 'c-name';
+        nm.textContent = name;
+        var when = document.createElement('span');
+        when.className = 'c-when';
+        when.textContent = whenLabel(iso);
+        head.appendChild(nm);
+        head.appendChild(when);
+        var body = document.createElement('p');
+        body.textContent = text;
+        item.appendChild(head);
+        item.appendChild(body);
+        return item;
+      }
+      function renderComments(rows) {
+        commentList.innerHTML = '';
+        if (!rows.length) {
+          var empty = document.createElement('p');
+          empty.className = 'comments-empty';
+          empty.textContent = 'No visitor comments yet. The wall is empty — unlike Row Z, which is full of his shots.';
+          commentList.appendChild(empty);
+          return;
+        }
+        rows.forEach(function (r) { commentList.appendChild(buildCommentItem(r.name, r.comment, r.created_at)); });
+      }
+      function loadComments() {
+        if (!sb) { sbOnline = false; showOfflineHints(); if (commentsSync) commentsSync.textContent = ''; renderComments(localComments); return Promise.resolve(); }
+        return sb.from('nicholas_comments').select('name, comment, created_at').order('created_at', { ascending: false }).limit(100).then(function (res) {
+          if (res.error) throw res.error;
+          sbOnline = true; hideOfflineHints();
+          if (commentsSync) commentsSync.textContent = 'Showing comments from fans everywhere — newest first.';
+          renderComments(res.data || []);
+        }).catch(function () {
+          sbOnline = false; showOfflineHints();
+          if (commentsSync) commentsSync.textContent = '';
+          renderComments(localComments);
+        });
+      }
+      commentForm.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        var name = cName.value.trim();
+        var text = cText.value.trim();
+        if (!name || !text) {
+          formHint.textContent = 'Name ar comment — dutoi lagbe! (Both are needed — even Nicholas manages to fill in the team sheet.)';
+          return;
+        }
+        formHint.textContent = '';
+        if (!sb || !sbOnline) {
+          // Offline fallback: this-visit-only wall, exactly as before.
+          localComments.unshift({ name: name, comment: text, created_at: new Date().toISOString() });
+          renderComments(localComments);
+          cText.value = '';
+          cText.focus();
+          return;
+        }
+        commentSubmit.disabled = true;
+        commentSubmit.textContent = 'Posting…';
+        sb.from('nicholas_comments').insert({ name: name, comment: text }).then(function (res) {
+          commentSubmit.disabled = false;
+          commentSubmit.textContent = 'Post comment';
+          if (res.error) {
+            sbOnline = false; showOfflineHints();
+            localComments.unshift({ name: name, comment: text, created_at: new Date().toISOString() });
+            renderComments(localComments);
+            formHint.textContent = 'Connection dropped — your comment is saved on this device only for now.';
+          } else {
+            loadComments();
+          }
+          cText.value = '';
+          cText.focus();
+        }).catch(function () {
+          commentSubmit.disabled = false;
+          commentSubmit.textContent = 'Post comment';
+          sbOnline = false; showOfflineHints();
+          localComments.unshift({ name: name, comment: text, created_at: new Date().toISOString() });
+          renderComments(localComments);
+          formHint.textContent = 'Connection dropped — your comment is saved on this device only for now.';
+          cText.value = '';
+          cText.focus();
+        });
+      });
+
+      // Load the shared wall on open
+      loadRatings();
+      loadComments();
+    </script>
+  </body>
+</html>
