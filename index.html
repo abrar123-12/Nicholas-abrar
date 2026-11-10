@@ -359,6 +359,12 @@
       .odd-card .odd-note { color: var(--ink-soft); font-size: .9rem; margin: 0; }
       .odd-card.featured .odd-note { color: #f0c9da; }
       .odds-foot { color: var(--ink-soft); font-size: .88rem; font-style: italic; margin-top: 12px; }
+      .lineup-box {
+        background: var(--surface-2); border: 1px solid var(--line); border-radius: 16px;
+        padding: 26px 24px 24px; margin-top: 40px;
+        box-shadow: 0 14px 36px rgba(20, 10, 30, .10);
+      }
+      @media (max-width: 560px) { .lineup-box { padding: 20px 14px 16px; } }
       .lineup-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
       .player-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
       .player-card.captain { border: 2px solid var(--gold); box-shadow: 0 10px 28px rgba(0,0,0,.12); }
@@ -692,6 +698,7 @@
       </div>
       <p class="odds-foot">For fun only — no real bets here, only real misses. Bonus market: Abrar shot on target 50/1 · Ball reaches the Moon 2/1 · Corner flag in danger 1/5.</p>
 
+      <div class="lineup-box">
       <h3 class="matchday-subhead">Funny lineup — <span style="color:var(--claret)">starting XI</span></h3>
       <p class="matchday-lede">Formation: 4-4-2 (on paper). In reality: 10 men defending, 1 man aiming at the sky. Player photos are coming soon — every slot below is ready for them.</p>
       <div class="lineup-grid">
@@ -747,6 +754,7 @@
         <div class="bench-card"><div class="bench-emoji" aria-hidden="true">⚽</div><h4>Ball</h4><p>Unused sub. Has spent more time in the sky than on the pitch this season — and still never in the net.</p></div>
         <div class="bench-card"><div class="bench-emoji" aria-hidden="true">🌙</div><h4>Moon</h4><p>Emergency target practice partner. Has caught 2 of Abrar's shots. Refuses to give them back.</p></div>
         <div class="bench-card"><div class="bench-emoji" aria-hidden="true">🚩</div><h4>Corner Flag</h4><p>The most threatened player on the bench. Survived a direct hit from 12 yards. Still standing. Just.</p></div>
+      </div>
       </div>
     </section>
 
